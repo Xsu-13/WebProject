@@ -251,14 +251,10 @@
 }
 
 .comments{
-    /*90px*/
-    margin-top: 200px;
-    /*90px*/
-    margin-bottom: 400px;
+    margin-top: 90px;
+    margin-bottom: 160px;
     background: url(../images/right-quote-sign.svg) no-repeat left top;
     background-size: 26%;
-    /*удалить*/
-    height: 500px;
 }
 
 .comments-title{
@@ -268,19 +264,23 @@
 }
 
 .comment-card{
+    position: relative;
     margin: 0 50px;
     margin-top: 120px;
+}
+
+.comment-card-wrapper{
+    position: relative;
+    padding: 67px 15px 67px 68px;
+    z-index: 6;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.10);
     background: #FFF;
     box-shadow: 0px 4px 60px 0px rgba(161, 161, 161, 0.25);
 }
 
-.comment-card-wrapper{
-    padding: 67px 15px 67px 68px;
-}
-
 .comment-card-content{
+    min-width: 0;
     padding: 0 60px;
     border-right: 1px rgba(0, 0, 0, 0.2) solid;
 }
@@ -328,13 +328,7 @@
     color: var(--Gray-5, #E0E0E0);
 }
 
-.comment-arrow{
-    cursor: pointer;
-}
-
 .workers{
-    /*no height*/
-    height: 600px;
     margin-bottom: 160px;
 }
 
@@ -357,11 +351,13 @@
 .slider-row{
     display: flex;
     flex-direction: row;
+    min-width: 0;
 }
 
 .slider-block{
     display: flex;
-    min-width: 23%;
+    min-width: 0;
+    width: 23%;
     height: 155px;
     border-radius: 5px;
     border: 1px solid #E5E5E5;
@@ -370,7 +366,73 @@
     margin: 10px;
 }
 
-.pupa{
-    color: #040613;
-    background-color: #4e5972;
+.slider>.slick-list>.slick-track{
+    display: flex;
+    width: 6000px;
+    transform: translate3d(-1220px, 0px, 0px);
+}
+
+.slider{
+    min-width: 0;
+}
+
+.slider .slick-arrow{
+    display: none;
+}
+
+.slick-list{
+    overflow: hidden;
+}
+
+.slider-second>.slick-list>.slick-track
+{
+    margin-left: 10%;
+}
+
+.comment-card::before{
+    content: "";
+    display: block;
+    background: #fff;
+    opacity: .5;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    box-shadow: 0 4px 60px rgba(162, 162, 162, .25);
+    border-radius: 5px;
+    position: absolute;
+    top: -40px;
+    bottom: 0;
+    left: 64px;
+    right: 64px;
+    z-index: 3;    
+}
+
+.comment-card::after{
+    content: "";
+    display: block;
+    background: #fff;
+    opacity: .34;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    box-shadow: 0 4px 60px rgba(162, 162, 162, .25);
+    border-radius: 5px;
+    position: absolute;
+    top: -72px;
+    bottom: 0;
+    left: 128px;
+    right: 128px;
+    z-index: 2;   
+}
+
+.comment-slider{
+    min-width: 0;
+}
+
+.slick-arrow{
+    cursor: pointer;
+}
+
+.slick-slide{
+    float: left;
+    height: 100%;
+    min-height: 1px;
 }
