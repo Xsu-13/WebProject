@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-family: 'Montserrat', sans-serif;
     color: var(--main-black, #050C33);
 }
+
 body{
     background-color: #ffffff;
 }
