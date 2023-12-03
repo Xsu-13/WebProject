@@ -49,6 +49,9 @@ body{
 .white-title{
     color: var(--White, #FFF);
 }
+.orange-title{
+    color: #F14D34;
+}
 
 .img-responsive{
     display: block;
@@ -72,11 +75,3 @@ body{
     }
 }
 
-@media (min-width:992px) {
-    .expertise-title {
-        font-size: 42px;
-    }
-    .expertise{
-        padding-top: 380px;
-    }
-}

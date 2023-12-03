@@ -111,6 +111,15 @@
     margin-bottom: -150px;
 }
 
+@media (min-width:992px) {
+    .expertise-title {
+        font-size: 42px;
+    }
+    .expertise{
+        padding-top: 380px;
+    }
+}
+
 .tarifs{
     background: url(../images/D-background-opacity-tarif.svg) no-repeat right top,#fff;
     background-size: 58%;
@@ -433,6 +442,5 @@
 
 .slick-slide{
     float: left;
-    height: 100%;
     min-height: 1px;
 }
