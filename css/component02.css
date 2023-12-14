@@ -433,6 +433,14 @@
 
 .slick-slide{
     float: left;
-    height: 100%;
     min-height: 1px;
+}
+
+@media (min-width:992px) {
+    .expertise-title {
+        font-size: 42px;
+    }
+    .expertise{
+        padding-top: 380px;
+    }
 }
