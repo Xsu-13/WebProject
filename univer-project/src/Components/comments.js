@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/comments.css"
-import $ from 'jquery'
 import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 
@@ -24,9 +23,10 @@ function PrevArrow(props) {
   }
 
 function Comments() {
+
     const customeSlider = useRef();
     let [currentSlide, setSlide] = useState("01");
-    //let currentSlide = "01";
+
     const prev = () => {
         customeSlider.current.slickNext();
         var i = parseInt(currentSlide) - 1;

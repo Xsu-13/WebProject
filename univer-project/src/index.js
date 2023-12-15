@@ -6,6 +6,7 @@ import Support from './Components/support';
 import Tarifs from './Components/tarifs';
 import Team from './Components/team';
 import Comments from './Components/comments';
+import Workers from './Components/workers';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
     <Tarifs/>
     <Team/>
     <Comments/>
+    <Workers/>
   </React.StrictMode>
 );
 
