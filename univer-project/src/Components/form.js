@@ -1,9 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/form.css"
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import {useHistory} from 'react-router-dom'
 
 function Form() {
+  const history = useHistory();
+  
+  const handleHistory = () =>{
+    history.push("/form");
+  }
+
     const [fio, setFIO] = useState('')
     const [email, setEmail] = useState('')
     const [tel, setTel] = useState('')
