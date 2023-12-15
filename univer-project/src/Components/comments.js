@@ -1,46 +1,65 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/comments.css"
-import "../JS/slick.min.js"
-import "https://code.jquery.com/jquery-3.4.1.min.js"
+import $ from 'jquery'
+import React, { useRef, useState } from 'react'
+import Slider from 'react-slick'
+
+function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div style={{...style}} className={className} onClick={onClick} class="slick-prev comment-arrow-prev slick-arrow">
+            <img src="images/arrow-left.svg" alt="иконка соответсвуюшая блоку" class="img-responsive"/>
+        </div>
+    );
+  }
+  
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div style={{...style}} className={className} onClick={onClick} class="slick-next comment-arrow-next slick-arrow">
+            <img src="images/arrow-right.svg" alt="иконка соответсвуюшая блоку" class="img-responsive"/>
+        </div>
+    );
+  }
 
 function Comments() {
+    const customeSlider = useRef();
+    let [currentSlide, setSlide] = useState("01");
+    //let currentSlide = "01";
+    const prev = () => {
+        customeSlider.current.slickNext();
+        var i = parseInt(currentSlide) - 1;
+        var result;
+        if(i < 1)
+            result = "08";
+        else
+            result = "0" + i;
+        setSlide(result);
+      };
+    
+      const next = () => {
+        customeSlider.current.slickPrev();
+        var i = parseInt(currentSlide) + 1;
+        var result;
+        if(i > 8)
+            result = "01";
+        else
+            result = "0" + i;
+        setSlide(result);
+      };
 
-    $(document).ready(function(){
-        $('.slider').slick({
-            slidesToShow: 5,
-            centerMode: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots:false,
-            prevArrow: false,
-            nextArrow: false
-        });
-        $('.comment-slider').slick({
-            adaptiveHeight:true,
-            centerMode:false,
-            slidesToShow: 1,
-            autoplay: false,
-            dots:false,
-            draggable: false,
-            fade: true,
-            prevArrow: $('comment-arrow-prev'),
-            nextArrow: $('comment-arrow-next')
-        });
-    
-        $('.comment-card-wrapper').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-            var i = (currentSlide ? currentSlide : 0) + 1;
-            $(this).find('.current-num').html("0" + i);
-        });
-    
-        $('.comment-arrow-prev').on('click', function() {
-            $('.comment-slider').slick('slickPrev');
-        });
-        $('.comment-arrow-next').on('click', function() {
-            $('.comment-slider').slick('slickNext');
-        });
-        
-    })
+    var settings={
+        adaptiveHeight:true,
+        centerMode:false,
+        slidesToShow: 1,
+        autoplay: false,
+        dots:false,
+        draggable: false,
+        fade: true,
+        arrows: false
+    }
+
   return (
     <div class="comments">
         <div class="container">
@@ -51,6 +70,7 @@ function Comments() {
                 <div class="comment-card-wrapper">
                     <div class="row">
                         <div class="col-md-8 comment-slider">
+                        <Slider {...settings} ref={customeSlider} >
                             <div class="comment-card-content slider_item">
                                 <div class="comment-logo">
                                     <img src="images/logo_0.png" alt="иконка соответсвуюшая блоку" class="img-responsive"/>
@@ -140,19 +160,17 @@ function Comments() {
                                     Sincerely, Natalia Sushkova, Head of the Web Projects Department of the Si El Perfume Group of Companies.
                                 </div>
                             </div>
+                        </Slider>
                         </div>
+                        
                         <div class="col-md-4">
                             <div class="comment-navigation">
                                 <div class="comment-navigation-wrapper">
-                                    <div class="slick-prev comment-arrow-prev slick-arrow">
-                                        <img src="images/arrow-left.svg" alt="иконка соответсвуюшая блоку" class="img-responsive"/>
-                                    </div>
+                                    <PrevArrow onClick={prev} />
                                     <div class="comment-num-text">
-                                        <span class="current-num">01</span><span class="sum-num"> / 08</span>
+                                        <span class="current-num">{currentSlide}</span><span class="sum-num"> / 08</span>
                                     </div>
-                                    <div class="slick-next comment-arrow-next slick-arrow">
-                                        <img src="images/arrow-right.svg" alt="иконка соответсвуюшая блоку" class="img-responsive"/>
-                                    </div>
+                                    <NextArrow onClick={next} />
                                 </div>
                             </div>
                         </div>
