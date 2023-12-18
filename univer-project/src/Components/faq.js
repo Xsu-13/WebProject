@@ -1,8 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/faq.css"
+import $, { event } from "jquery"
+import React, { useRef, useState, useEffect } from 'react'
 
-function FAQ() {    
+function FAQ() {
+
+    let classMainName = 'question-item';
+    let classActive = " activeAnswer";
+    let classActiveBorder = "active-border";
+
+    function Update() {
+        $(".question-item").each(() => {
+            $(this).toggleClass('activeAnswer question-item')
+        });
+    }
+
+    useEffect(() => {
+        $('.question-item').on('click', function () {
+            Update();
+
+            $(this).addClass(classActive);
+            $(this).addClass(classActiveBorder);
+        });
+    });
+
     return (
         <div class="block-faq">
             <div class="container">
@@ -10,7 +32,7 @@ function FAQ() {
                     FAQ
                 </div>
                 <div class="question">
-                    <div class="question-item">
+                    <div id="0" className={classMainName}>
                         <div class="question-header">
                             <div class="question-title block-title">
                                 Кто непосредственно занимается поддержкой?
@@ -27,7 +49,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div id="1" onClick={Update} className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Как организована работа поддержки?
@@ -49,7 +71,7 @@ function FAQ() {
                         </div>
                     </div>
 
-                    <div class="question-item">
+                    <div id="2" onClick={Update} className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Что происходит, когда отработаны все предоплаченные часы за месяц?

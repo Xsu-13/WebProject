@@ -50,7 +50,8 @@
     margin-bottom: 0;
 }
 
-.question-item.active .question-content {
+
+.question-item.activeAnswer .question-content {
     display: block;
 }
 
