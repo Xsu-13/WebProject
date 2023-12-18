@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.99bbfc72.css",
+    "main.js": "/static/js/main.db2eb9c6.js",
+    "static/js/787.dabd5629.chunk.js": "/static/js/787.dabd5629.chunk.js",
+    "static/media/D-background-opacity-tarif.svg": "/static/media/D-background-opacity-tarif.6349a7c034be4555846e.svg",
+    "static/media/drupal-logo-2.svg": "/static/media/drupal-logo-2.f675dc29a757ca24e236.svg",
+    "static/media/right-quote-sign.svg": "/static/media/right-quote-sign.06a38bad466a8d7ea90a.svg",
+    "index.html": "/index.html",
+    "static/media/checkmark.svg": "/static/media/checkmark.9cfe1eb81c7261d56da2.svg",
+    "main.99bbfc72.css.map": "/static/css/main.99bbfc72.css.map",
+    "main.db2eb9c6.js.map": "/static/js/main.db2eb9c6.js.map",
+    "787.dabd5629.chunk.js.map": "/static/js/787.dabd5629.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99bbfc72.css",
+    "static/js/main.db2eb9c6.js"
+  ]
+}
