@@ -1,0 +1,247 @@
+.comments{
+    margin-top: 90px;
+    margin-bottom: 160px;
+    background: url(../../public/Images/right-quote-sign.svg) no-repeat left top;
+    background-size: 26%;
+}
+
+.comments-title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    padding-top: 40px;
+}
+
+.comment-card{
+    position: relative;
+    margin: 0;
+    margin-top: 60px;
+}
+
+.comment-card-wrapper{
+    position: relative;
+    padding: 10px 15px;
+    z-index: 6;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    box-shadow: 0px 4px 60px 0px rgba(161, 161, 161, 0.25);
+}
+
+.comment-card-content{
+    min-width: 0;
+    padding: 0px 25px;
+    border-right: none;
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+.comment-logo{
+    margin-top: 13px;
+    margin-bottom: 40px;
+}
+
+.comment-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+
+.comment-info{
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.5;
+    margin-bottom: 22px;
+}
+
+.comment-navigation{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.comment-navigation-wrapper{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+}
+
+.comment-num-text{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 28px;
+    padding: 0 46px;
+}
+
+.sum-num{
+    color: var(--Gray-5, #E0E0E0);
+}
+
+.slider-row{
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+}
+
+.slider-block{
+    display: flex;
+    min-width: 0;
+    width: 23%;
+    height: 155px;
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.slider-block-img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider>.slick-list>.slick-track{
+    display: flex;
+    width: 6000px;
+    transform: translate3d(-1220px, 0px, 0px);
+}
+
+.slider{
+    min-width: 0;
+}
+
+.slider .slick-arrow{
+    display: none;
+}
+
+.slick-list{
+    overflow: hidden;
+}
+
+.second-slider>.slick-slider>.slick-list>.slick-track
+{
+    margin-left: 10%;
+}
+
+.second-slider>.slick-slider>.slick-list>.slick-track>.slick-slide
+{
+    margin-left: 10px;
+    margin-bottom: -92px;
+}
+
+.first-slider>.slick-slider>.slick-list>.slick-track>.slick-slide
+{
+    margin-left: 10px;
+    margin-bottom: -92px;
+}
+
+.comment-card::before{
+    content: "";
+    display: block;
+    background: #fff;
+    opacity: .5;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    box-shadow: 0 4px 60px rgba(162, 162, 162, .25);
+    border-radius: 5px;
+    position: absolute;
+    top: -20px;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    z-index: 3;    
+}
+
+.comment-card::after{
+    content: "";
+    display: block;
+    background: #fff;
+    opacity: .34;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    box-shadow: 0 4px 60px rgba(162, 162, 162, .25);
+    border-radius: 5px;
+    position: absolute;
+    top: -36px;
+    bottom: 0;
+    left: 32px;
+    right: 32px;
+    z-index: 2;   
+}
+
+.comment-slider{
+    min-width: 0;
+}
+
+.slick-arrow{
+    cursor: pointer;
+}
+
+.slick-slide{
+    float: left;
+    min-height: 1px;
+}
+
+.workers{
+    margin-bottom: 160px;
+}
+
+.workers-title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.workers-text{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    opacity: 0.7;
+    margin-bottom: 32px;
+}
+
+@media (min-width:992px) {
+    .comment-card-wrapper{
+        padding: 67px 15px 67px 68px;
+    }
+    .comment-card-content{
+        padding: 0 60px;
+    }
+    .comment-card::before{
+        left: 64px;
+        right: 64px;
+        top: -40px;
+    }
+    .comment-card::after{
+        left: 128px;
+        right: 128px;
+        top: -72px;
+    }
+    .comment-card{
+        margin: 0 50px;
+        margin-top: 120px;
+    }
+    .comment-card-content{
+        border-bottom: none;
+        border-right: 1px rgba(0, 0, 0, 0.2) solid;
+    }
+    .workers-title{
+        font-size: 42px;
+    }
+    .comments-title{
+        padding-top: 0px;
+        font-size: 42px;
+    }
+    .comment-navigation{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}

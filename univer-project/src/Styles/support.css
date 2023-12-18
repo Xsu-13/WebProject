@@ -1,0 +1,130 @@
+.support-element{
+    margin-top: 160px;
+}
+
+.support-title{
+    text-align: center;
+    margin-bottom: 56px;
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.support-col{
+    margin-bottom: 5px;
+}
+
+.support-block{
+    border-radius: 5px;
+    background: var(--White, #ffffff);
+    box-shadow: 20px 20px 40px rgba(5, 12, 51, .05);
+    min-height: 292px;
+    height: 100%;
+    position: relative;
+    margin: 0 -8px;
+    z-index: 5;
+}
+
+.support-block-wrapper{
+    padding-top: 27px;
+    padding-left: 25px;
+    padding-right: 30px;
+    padding-bottom: 42px;
+    z-index: 5;
+}
+
+.support-block-num
+{
+    font-weight: 700;
+    font-size: 12px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.support-block-title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.22;
+}
+
+.support-text{
+    font-size: 16px;
+    opacity: 0.7;
+    font-weight: 500;
+    line-height: 22px;
+    position: relative;
+    z-index: 8;
+}
+
+.support-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+.support-element {
+    margin-bottom: -212px;
+}
+
+.expertise{
+    z-index: 4;
+    position: relative;
+    padding-top: 240px;
+    background: linear-gradient(254.72deg, rgba(255, 255, 255, .276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
+}
+
+.expertise:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../../public/Images/drupal-logo-2.svg) no-repeat right bottom;
+    background-size: contain;
+    z-index: 10;
+}
+
+.expertise-title{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+.expertise-text{
+    height: 88px;
+    font-weight: 500;
+    line-height: 22px; 
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.expertise-text-block{
+    padding: 6px 20px;
+    border-left: 3px solid #F14D34;
+    margin-bottom: 40px;
+}
+
+.expertise-info-block{
+    padding-left: 30px;
+}
+.expertise-img{
+    margin-bottom: -150px;
+}
+
+.orange{
+    color: #F14D34;
+}
+
+@media (min-width:992px) {
+    .expertise-title {
+        font-size: 42px;
+        margin-top: 120px;
+    }
+    .expertise{
+        padding-top: 380px;
+    }
+}
