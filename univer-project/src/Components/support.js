@@ -173,17 +173,31 @@ function Support() {
                 Экспертиза в Drupal,<br/> опыт 14 лет!
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="col-md-5 col-sm-12 col-xs-12">
                     <div class="expertise-text-block">
                         <div class="expertise-text white-title">
                             Только системный подход –<br/>контроль версий,<br/> резервирование<br/>и тестирование!
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="col-md-5 col-sm-12 col-xs-12">
                     <div class="expertise-text-block">
                         <div class="expertise-text white-title">
                             Только Drupal сайты,<br/>не берем на поддержку<br/> сайты на других CMS!
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="expertise-text-block">
+                        <div class="expertise-text white-title">
+                            Участвуем в разработке <br/> ядра Drupal и модулей на<br/> Drupal.org, разрабатываем <br/><span class="orange">свои модули Drupal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="expertise-text-block">
+                        <div class="expertise-text white-title">
+                            Поддерживаем сайты на <br/> Drupal 5, 6, 7 и 8
                         </div>
                     </div>
                 </div>

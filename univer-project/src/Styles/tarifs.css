@@ -1,16 +1,16 @@
 .tarifs{
-    background: url(../../public/Images/D-background-opacity-tarif.svg) no-repeat right top,#fff;
-    background-size: 58%;
+    background: url(../../public/Images/D-background-opacity-tarif.svg) repeat-y right top,#fff;
+    background-size: 450%;
     z-index: 3;
 }
 
 .tarif-title{
-    padding-top: 160px;
+    padding-top: 200px;
     color: #000;
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
-    padding-bottom: 82px;
+    padding-bottom: 42px;
 }
 
 .card-content{
@@ -32,7 +32,7 @@
 }
 
 .card-price{
-    font-size: 72px;
+    font-size: 54px;
     font-weight: 700;
     line-height: 72px;
     text-transform: uppercase;
@@ -130,9 +130,25 @@
     text-decoration-line: underline;
     text-transform: uppercase;
     cursor: pointer;
+    padding-bottom: 30px;
 }
 
 .tarif-href:hover{
     color: #F14D34;
     text-decoration-line: none;
+}
+
+@media (min-width:992px) {
+    .tarifs{
+        background: url(../../public/Images/D-background-opacity-tarif.svg) no-repeat right top,#fff;
+        background-size: contain;
+    }
+    .tarif-title{
+        font-size: 42px;
+        padding-bottom: 82px;
+        padding-top: 160px;
+    }
+    .card-price{
+        font-size: 72px;
+    }
 }

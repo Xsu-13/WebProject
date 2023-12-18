@@ -7,30 +7,32 @@
 
 .comments-title{
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
+    padding-top: 40px;
 }
 
 .comment-card{
     position: relative;
-    margin: 0 50px;
-    margin-top: 120px;
+    margin: 0;
+    margin-top: 60px;
 }
 
 .comment-card-wrapper{
     position: relative;
-    padding: 67px 15px 67px 68px;
+    padding: 10px 15px;
     z-index: 6;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.10);
+    border: 2px solid rgba(0, 0, 0, 0.10);
     background: #FFF;
     box-shadow: 0px 4px 60px 0px rgba(161, 161, 161, 0.25);
 }
 
 .comment-card-content{
     min-width: 0;
-    padding: 0 60px;
-    border-right: 1px rgba(0, 0, 0, 0.2) solid;
+    padding: 0px 25px;
+    border-right: none;
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
 }
 
 .comment-logo{
@@ -57,6 +59,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .comment-navigation-wrapper{
@@ -147,10 +151,10 @@
     box-shadow: 0 4px 60px rgba(162, 162, 162, .25);
     border-radius: 5px;
     position: absolute;
-    top: -40px;
+    top: -20px;
     bottom: 0;
-    left: 64px;
-    right: 64px;
+    left: 16px;
+    right: 16px;
     z-index: 3;    
 }
 
@@ -164,10 +168,10 @@
     box-shadow: 0 4px 60px rgba(162, 162, 162, .25);
     border-radius: 5px;
     position: absolute;
-    top: -72px;
+    top: -36px;
     bottom: 0;
-    left: 128px;
-    right: 128px;
+    left: 32px;
+    right: 32px;
     z-index: 2;   
 }
 
@@ -190,7 +194,7 @@
 
 .workers-title{
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -202,4 +206,42 @@
     line-height: 22px;
     opacity: 0.7;
     margin-bottom: 32px;
+}
+
+@media (min-width:992px) {
+    .comment-card-wrapper{
+        padding: 67px 15px 67px 68px;
+    }
+    .comment-card-content{
+        padding: 0 60px;
+    }
+    .comment-card::before{
+        left: 64px;
+        right: 64px;
+        top: -40px;
+    }
+    .comment-card::after{
+        left: 128px;
+        right: 128px;
+        top: -72px;
+    }
+    .comment-card{
+        margin: 0 50px;
+        margin-top: 120px;
+    }
+    .comment-card-content{
+        border-bottom: none;
+        border-right: 1px rgba(0, 0, 0, 0.2) solid;
+    }
+    .workers-title{
+        font-size: 42px;
+    }
+    .comments-title{
+        padding-top: 0px;
+        font-size: 42px;
+    }
+    .comment-navigation{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
 }

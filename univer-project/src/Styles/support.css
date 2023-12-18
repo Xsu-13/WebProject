@@ -91,7 +91,7 @@
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 60px;
-    margin-top: 120px;
+    margin-top: 10px;
 }
 
 .expertise-text{
@@ -115,9 +115,14 @@
     margin-bottom: -150px;
 }
 
+.orange{
+    color: #F14D34;
+}
+
 @media (min-width:992px) {
     .expertise-title {
         font-size: 42px;
+        margin-top: 120px;
     }
     .expertise{
         padding-top: 380px;

@@ -16,7 +16,7 @@ function YearsBlock() {
             </div>
         </div>
         <div class="row row-flex competencies-row">
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">
@@ -32,7 +32,7 @@ function YearsBlock() {
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">
@@ -47,7 +47,7 @@ function YearsBlock() {
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">
@@ -63,7 +63,7 @@ function YearsBlock() {
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">
@@ -78,7 +78,7 @@ function YearsBlock() {
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">
@@ -93,7 +93,7 @@ function YearsBlock() {
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">
@@ -108,7 +108,7 @@ function YearsBlock() {
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">
@@ -123,7 +123,7 @@ function YearsBlock() {
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-6 col-md-3 col-sm-6">
                 <div class="competency">
                     <div class="competency-wrapper">
                         <div class="competency-header">

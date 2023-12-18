@@ -74,14 +74,6 @@ function Team() {
     </div>
 
 
-
-
-
-
-
-
-
-
     <div class="block-team container">
         <div class="our-team black-title">
             Команда
