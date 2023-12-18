@@ -7,19 +7,21 @@ import Tarifs from './Components/tarifs';
 import Team from './Components/team';
 import Comments from './Components/comments';
 import Workers from './Components/workers';
+import FAQ from './Components/faq';
 import Form from './Components/form';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <YearsBlock/>
-    <Support/>
-    <Tarifs/>
-    <Team/>
-    <Comments/>
-    <Workers/>
-    <Form/>
+    <YearsBlock />
+    <Support />
+    <Tarifs />
+    <Team />
+    <Comments />
+    <Workers />
+    <FAQ />
+    <Form />
   </React.StrictMode>
 );
 
