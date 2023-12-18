@@ -1,3 +1,93 @@
+/* FAQ*/
+
+.block-name-faq {
+    text-align: center;
+    margin-top: 70px;
+    color: #000;
+    font-size: 42px;
+    font-weight: 700;
+    padding-bottom: 82px;
+}
+
+/* Стили для аккордеона */
+.question-item {
+    padding: 10px 12px 10px 30px;
+    counter-increment: question-title;
+}
+
+.question-header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.question-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.question-toggle {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.question-content {
+    display: none;
+    padding: 15px;
+}
+
+.question-content p {
+    font-size: 16px;
+    color: #4e5a73;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.question-item.active .question-content {
+    display: block;
+}
+
+.question-item.active-border {
+    border: 3px solid #f14d34;
+}
+
+.question-content ul li {
+    list-style: disc;
+    font-size: 16px;
+    color: #4e5a73;
+}
+
+.question-content ul {
+    margin-bottom: 0rem;
+}
+
+.question-title::before {
+    content: counter(question-title) ".";
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #828a9b;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Блок "Команда" */
 
 .our-team {
@@ -69,6 +159,10 @@
 }
 
 
+
+
+
+
 /*13 лет...*/
 
 ._13-years-blok {
@@ -116,6 +210,7 @@
     line-height: 22px;
     color: #282e4c;
 }
+
 
 
 
