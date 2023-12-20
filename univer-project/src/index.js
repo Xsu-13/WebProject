@@ -1,25 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import YearsBlock from './Components/yearsBlock';
-import Support from './Components/support';
-import Tarifs from './Components/tarifs';
-import Team from './Components/team';
-import Comments from './Components/comments';
-import Workers from './Components/workers';
 import Form from './Components/form';
+import Page from './Components/page';
+
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <YearsBlock/>
-    <Support/>
-    <Tarifs/>
-    <Team/>
-    <Comments/>
-    <Workers/>
-    <Form/>
+        <BrowserRouter>
+        <Routes>
+          <Route path='' element={<Page/>}/>
+          <Route path="/form" element={<div><div><Page/></div> <div><Form /></div></div> } />
+        </Routes>
+        </BrowserRouter>
+    
+    
+    
   </React.StrictMode>
 );
 

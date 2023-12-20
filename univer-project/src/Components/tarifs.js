@@ -1,8 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/tarifs.css"
+import {useNavigate} from 'react-router-dom'
 
 function Tarifs() {
+
+    const navigate = useNavigate();
+  
+    const OpenForm = () =>{
+      navigate("/form");
+    }
+
   return (
     <div class="tarifs">
         <div class="container">
@@ -40,7 +48,7 @@ function Tarifs() {
                                 </li>
                             </ul>
                         </div>
-                        <button class="card-button unactive">Оставить заявку!</button>
+                        <button onClick={() => OpenForm()} class="card-button unactive">Оставить заявку!</button>
                     </div>
                 </div>
                 <div class="col-md-4 card">
@@ -63,7 +71,7 @@ function Tarifs() {
                                 <li class="card-list-item">Неиспользованные часы не переносятся</li>
                             </ul>
                         </div>
-                        <button class="card-button active">Оставить заявку!</button>
+                        <button onClick={() => OpenForm()} class="card-button active">Оставить заявку!</button>
                     </div>
                 </div>
                 <div class="col-md-4 card">
@@ -86,7 +94,7 @@ function Tarifs() {
                                 <li class="card-list-item">Неиспользованные часы не переносятся</li>
                             </ul>
                         </div>
-                        <button class="card-button unactive">Оставить заявку!</button>
+                        <button onClick={() => OpenForm()} class="card-button unactive">Оставить заявку!</button>
                     </div>
                 </div>
             </div>
