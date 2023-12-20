@@ -3,6 +3,7 @@ import "../Styles/MainStyle.css"
 import "../Styles/form.css"
 import React, { useEffect, useState } from 'react'
 import {useNavigate} from 'react-router-dom'
+import FormContent from './formContent'
 
 function Form() {
     
@@ -79,31 +80,7 @@ function Form() {
                 <path fill="#F44336" d="M21.5 4.5H26.501V43.5H21.5z" transform="rotate(45.001 24 24)"></path><path fill="#F44336" d="M21.5 4.5H26.5V43.501H21.5z" transform="rotate(135.008 24 24)"></path>
             </svg>
         </button>
-        <form action="https://formcarry.com/s/fCsjmrtmZ4" method="POST" accept-charset="UTF-8" >
-            <div class="form-group">
-                <label for="name"></label>
-                <input type="text" value={fio} onChange={(e) => setFIO(e.target.value)} class="form-control" id="name" placeholder="Ваше имя"/>
-            </div>
-            <div class="form-group">
-                <label htmlFor="phone" for="phone"></label>
-                <input type="tel" pattern="\d*" value={tel} onChange={(e) => setTel(e.target.value)} class="form-control" id="phone"  placeholder="Телефон"/>
-            </div>
-            <div class="form-group">
-                <label for="email"></label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} class="form-control" id="email" placeholder="E-mail"/>
-            </div>
-            <div class="form-group">
-                <label for="comment"></label>
-                <input type="text" value={comment} onChange={(e) => setComment(e.target.value)} class="form-control" id="comment" placeholder="Ваш комментарий"/>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="agree" required/>
-                <label class="form-check-label" for="agree">
-                    Отправляя заявку, я даю согласие на обработку своих <br/>персональных данных
-                </label>
-            </div>
-            <button type="submit" onSubmit={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>
-        </form>
+        <FormContent/>
     </div>
 </div>
   );

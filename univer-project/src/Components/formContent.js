@@ -2,15 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/form.css"
 import React, { useEffect, useState } from 'react'
-import {useNavigate} from 'react-router-dom'
 
-function Form() {
-    
-    const navigate = useNavigate();
-  
-    const closeForm = () =>{
-      navigate("/");
-    }
+function FormContent() {
 
     const [fio, setFIO] = useState('')
     const [email, setEmail] = useState('')
@@ -91,4 +84,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormContent;

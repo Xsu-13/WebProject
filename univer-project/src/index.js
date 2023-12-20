@@ -1,15 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//import YearsBlock from './Components/yearsBlock';
-// import Support from './Components/support';
-// import Tarifs from './Components/tarifs';
-// import Team from './Components/team';
-// import Comments from './Components/comments';
-// import Workers from './Components/workers';
-// import FAQ from './Components/faq';
 import Form from './Components/form';
 import Page from './Components/page';
+
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
