@@ -5,23 +5,24 @@ import $, { event } from "jquery"
 import React, { useRef, useState, useEffect } from 'react'
 
 function FAQ() {
-
-    let classMainName = 'question-item';
-    let classActive = " activeAnswer";
+    
+    let classMainName = "question-item";
+    let classActive = "activeAnswer";
     let classActiveBorder = "active-border";
 
-    function Update() {
-        $(".question-item").each(() => {
-            $(this).toggleClass('activeAnswer question-item')
-        });
-    }
-
     useEffect(() => {
-        $('.question-item').on('click', function () {
-            Update();
-
-            $(this).addClass(classActive);
-            $(this).addClass(classActiveBorder);
+        $('.question-item').on('click', function (e) {
+            e.preventDefault();
+            if($(this).hasClass('activeAnswer'))
+            {
+                console.log($(this));
+                $(this).removeClass(classActive);
+                $(this).removeClass(classActiveBorder);
+            }
+            else{
+                $(this).addClass(classActive);
+                $(this).addClass(classActiveBorder);
+            }          
         });
     });
 
@@ -32,7 +33,7 @@ function FAQ() {
                     FAQ
                 </div>
                 <div class="question">
-                    <div id="0" className={classMainName}>
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title block-title">
                                 Кто непосредственно занимается поддержкой?
@@ -49,7 +50,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div id="1" onClick={Update} className={classMainName}>
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Как организована работа поддержки?
@@ -71,7 +72,7 @@ function FAQ() {
                         </div>
                     </div>
 
-                    <div id="2" onClick={Update} className={classMainName}>
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Что происходит, когда отработаны все предоплаченные часы за месяц?
@@ -91,7 +92,7 @@ function FAQ() {
                         </div>
                     </div>
 
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Что происходит, когда не отработаны все предоплаченные часы за месяц?
@@ -107,7 +108,7 @@ function FAQ() {
                         </div>
                     </div>
 
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Как происходит оценка и согласование планируемого времени на выполнение заявок?
@@ -138,7 +139,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Сколько программистов выделяется на проект?
@@ -146,7 +147,7 @@ function FAQ() {
                             <button class="question-toggle"></button>
                         </div>
                         <div class="question-content">
-                            <p>
+                            <div class="question-ul">
                                 1-2 человека. За каждым проектом закрепляется один ответственный специалист, через которого
                                 проходят
                                 все заявки. Все заявки становятся в очередь к ответственному в порядке их поступления в
@@ -159,10 +160,10 @@ function FAQ() {
                                     <li>специфика задачи такова, что кто-то в команде сделает эту работу существенно быстрее.
                                     </li>
                                 </ul>
-                            </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Как подать заявку на внесение изменений на сайте?
@@ -177,7 +178,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Как подать заявку на добавление пользователя, изменение настроек веб-сервера и других задач
@@ -194,7 +195,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 В течение какого времени начинается работа по заявке?
@@ -212,7 +213,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 В какое время работает поддержка?
@@ -227,7 +228,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Подходят ли услуги поддержки, если необходимо произвести обновление ядра Drupal или модулей?
@@ -250,7 +251,7 @@ function FAQ() {
                             </p>
                         </div>
                     </div>
-                    <div class="question-item">
+                    <div className={classMainName}>
                         <div class="question-header">
                             <div class="question-title">
                                 Можно ли пообщаться со специалистом голосом или в мессенджере?

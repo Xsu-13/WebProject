@@ -43,7 +43,7 @@
     padding: 15px;
 }
 
-.question-content p {
+.question-content p, .question-ul {
     font-size: 16px;
     color: #4e5a73;
     line-height: 1.4;
