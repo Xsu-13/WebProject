@@ -1,0 +1,241 @@
+/* FAQ*/
+
+.block-name-faq {
+    text-align: center;
+    margin-top: 70px;
+    color: #000;
+    font-size: 42px;
+    font-weight: 700;
+    padding-bottom: 82px;
+}
+
+/* Стили для аккордеона */
+.question-item {
+    padding: 10px 12px 10px 30px;
+    counter-increment: question-title;
+}
+
+.question-header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.question-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.question-toggle {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.question-content {
+    display: none;
+    padding: 15px;
+}
+
+.question-content p {
+    font-size: 16px;
+    color: #4e5a73;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.question-item.active .question-content {
+    display: block;
+}
+
+.question-item.active-border {
+    border: 3px solid #f14d34;
+}
+
+.question-content ul li {
+    list-style: disc;
+    font-size: 16px;
+    color: #4e5a73;
+}
+
+.question-content ul {
+    margin-bottom: 0rem;
+}
+
+.question-title::before {
+    content: counter(question-title) ".";
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #828a9b;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Блок "Команда" */
+
+.our-team {
+    text-align: center;
+    margin-top: 160px;
+    color: #000;
+    font-size: 42px;
+    font-weight: 700;
+    padding-bottom: 82px;
+}
+
+.employee-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: left;
+}
+
+.new-card {
+    text-align: left;
+    margin-bottom: 70px;
+    padding: 0 50px;
+}
+
+.card-photo {
+    border-radius: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 25px;
+}
+
+.card-name a,
+.card-name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.37;
+    color: #050c33;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.card-post {
+    padding: 0;
+    color: #505570;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.37;
+    margin-bottom: 5px;
+}
+
+
+.all-the-team a {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 24px 75px;
+    border: 1px solid #cccdd5;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.all-the-team {
+    text-align: center;
+}
+
+
+
+
+
+
+/*13 лет...*/
+
+._13-years-blok {
+    margin-top: 100px;
+}
+
+._13-years-name {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.competencies-13-years-name {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.competency-wrapper {
+    padding-top: 50px;
+}
+
+.competency-header {
+    position: relative;
+}
+
+.competency-icon {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 2;
+}
+
+.background-icon {
+    position: absolute;
+    width: 115px;
+    height: 70px;
+    z-index: 1;
+    left: -55px;
+    bottom: -7px;
+}
+
+.competency-body {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #282e4c;
+}
+
+
+
+
+
+/*Наши профессиональные разработчики*/
+
+.our-professional-developers-blok {
+    margin-top: 100px;
+}
+
+.our-professional-developers-name {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.competency-body-big {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.competency-body-our-professional-developers {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #282e4c;
+    padding-top: 5px;
+}

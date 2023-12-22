@@ -1,0 +1,90 @@
+.our-professional-developers-blok {
+    margin-top: 100px;
+}
+
+.our-professional-developers-name {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.competency-body-big {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.competency-body-our-professional-developers {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #282e4c;
+    padding-top: 5px;
+}
+
+.our-team {
+    text-align: center;
+    margin-top: 160px;
+    color: #000;
+    font-size: 42px;
+    font-weight: 700;
+    padding-bottom: 82px;
+}
+
+.employee-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: left;
+}
+
+.new-card {
+    text-align: left;
+    margin-bottom: 70px;
+    padding: 0 50px;
+}
+
+.card-photo {
+    border-radius: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 25px;
+}
+
+.card-name a,
+.card-name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.37;
+    color: #050c33;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.card-post {
+    padding: 0;
+    color: #505570;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.37;
+    margin-bottom: 5px;
+}
+
+
+.all-the-team a {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 24px 75px;
+    border: 1px solid #cccdd5;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.all-the-team {
+    text-align: center;
+}
