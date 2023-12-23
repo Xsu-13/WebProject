@@ -8,14 +8,14 @@
     left: 0;
     background-color: rgba(0, 0, 0, .7);
 }
-.main{
+/* .main{
     position: relative;
     z-index: 10;
     background: #ffffff;
     width: 100vw;   
     height: 1578px;
     top: 40px;
-}
+} */
 
 footer{
     position: relative;
@@ -219,6 +219,7 @@ footer{
     font-weight: 700;
     line-height: normal;
     margin-bottom: 60px;
+    margin-top: 160px;
 }
 
 .cases-up-1-nastr{
@@ -375,18 +376,21 @@ footer{
     top: 13px;
 }
 
+.f{
+    position: relative;
+    top: 110px;
+    left: 90px;
+}
+
 .line {
     width: 100vw;
     height: 1px;
     background-color: #FFF;
     position: relative;
-    bottom: 110px;
+    top: 160px; 
 }
 
 @media (max-width: 767px) {
-    .main{
-        height: 4578px;
-    }
 
     .cases img{
         width: 98%;

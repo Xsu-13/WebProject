@@ -10,7 +10,6 @@ import Workers from './workers';
 import FAQ from './faq';
 import Form from './form';
 
-
 function Page() {
   return (
     <div>

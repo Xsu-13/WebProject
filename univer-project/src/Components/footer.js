@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/Header.css"
+import FormContent from './formContent'
 
 function Footer() {
   return (
@@ -26,8 +27,8 @@ function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div class="form col-md-6">
-
+                        <div class="f col-md-6">
+                            <FormContent />
                         </div>
                     </div>
                 </div>
@@ -40,6 +41,7 @@ function Footer() {
                 </div>
             </div>
         </div>
+        <div class="line"></div>
     </footer>   
   );
 }

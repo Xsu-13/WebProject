@@ -71,7 +71,7 @@ function FormContent() {
             </div>
             <div class="form-group">
                 <label for="comment"></label>
-                <input type="text" value={comment} onChange={(e) => setComment(e.target.value)} class="form-control" id="comment" placeholder="Ваш комментарий"/>
+                <textarea rows="6" type="text" value={comment} onChange={(e) => setComment(e.target.value)} class="form-control" id="comment" placeholder="Ваш комментарий"/>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="agree" required/>
