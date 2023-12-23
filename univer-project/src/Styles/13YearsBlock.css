@@ -1,3 +1,4 @@
+/*13 лет...*/
 ._13-years-blok {
     padding-top: 80px;
     position: relative;
@@ -47,4 +48,39 @@
     font-size: 16px;
     line-height: 22px;
     color: #282e4c;
+}
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width:768px) {
+    ._13-years-name {
+        font-size: 25px;
+    }
+
+    .competencies-13-years-name {
+        font-size: 14px;
+    }
+
+    .competency-body {
+        font-size: 14px;
+    }
+
+    .background-icon {
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .competency-icon {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    ._13-years-name {
+        font-size: 36px;
+    }
 }
