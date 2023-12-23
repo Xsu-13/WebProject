@@ -43,10 +43,12 @@ function YearsBlock() {
                         <div class="competency">
                             <div class="competency-wrapper">
                                 <div class="competency-header">
-                                    <div class="background-icon"><img src="images/icon-bg.svg" alt="Задний фон блока 2"
-                                        class="img-responsive" /></div>
-                                    <div class="competency-icon"><img src="images/competency-2.svg" alt="Иконка блока 2"
-                                        class="img-responsive" /></div>
+                                    <div class="background-icon">
+                                        <img src="images/icon-bg.svg" alt="Задний фон блока 2" class="img-responsive" />
+                                    </div>
+                                    <div class="competency-icon">
+                                        <img src="images/competency-2.svg" alt="Иконка блока 2" class="img-responsive" />
+                                    </div>
                                 </div>
                                 <div class="competency-body">
                                     Разработка <br /> и оптимизация  <br />модулей сайта
@@ -58,10 +60,12 @@ function YearsBlock() {
                         <div class="competency">
                             <div class="competency-wrapper">
                                 <div class="competency-header">
-                                    <div class="background-icon"><img src="images/icon-bg.svg" alt="Задний фон блока 3"
-                                        class="img-responsive" /></div>
-                                    <div class="competency-icon"><img src="images/competency-3.svg" alt="Иконка блока 3"
-                                        class="img-responsive" /></div>
+                                    <div class="background-icon">
+                                        <img src="images/icon-bg.svg" alt="Задний фон блока 3" class="img-responsive" />
+                                    </div>
+                                    <div class="competency-icon">
+                                        <img src="images/competency-3.svg" alt="Иконка блока 3" class="img-responsive" />
+                                    </div>
                                 </div>
                                 <div class="competency-body">
                                     Интеграция с CRM, <br /> 1C, платежными <br /> системами, любыми
@@ -74,10 +78,12 @@ function YearsBlock() {
                         <div class="competency">
                             <div class="competency-wrapper">
                                 <div class="competency-header">
-                                    <div class="background-icon"><img src="images/icon-bg.svg" alt="Задний фон блока 1"
-                                        class="img-responsive" /></div>
-                                    <div class="competency-icon"><img src="images/competency-4.svg" alt="Иконка блока 3"
-                                        class="img-responsive" /></div>
+                                    <div class="background-icon">
+                                        <img src="images/icon-bg.svg" alt="Задний фон блока 4" class="img-responsive" />
+                                    </div>
+                                    <div class="competency-icon">
+                                        <img src="images/competency-4.svg" alt="Иконка блока 4" class="img-responsive" />
+                                    </div>
                                 </div>
                                 <div class="competency-body">
                                     Любые доработки <br /> функционала <br /> и дизайна
@@ -85,14 +91,16 @@ function YearsBlock() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3 col-sm-6">
+                    <div class="col-6 col-xs-6 col-md-3">
                         <div class="competency">
                             <div class="competency-wrapper">
                                 <div class="competency-header">
-                                    <div class="background-icon"><img src="images/icon-bg.svg" alt="Задний фон блока 1"
-                                        class="img-responsive" /></div>
-                                    <div class="competency-icon"><img src="images/competency-5.svg" alt="Иконка блока 4"
-                                        class="img-responsive" /></div>
+                                    <div class="background-icon">
+                                        <img src="images/icon-bg.svg" alt="Задний фон блока 5" class="img-responsive" />
+                                    </div>
+                                    <div class="competency-icon">
+                                        <img src="images/competency-5.svg" alt="Иконка блока 5" class="img-responsive" />
+                                    </div>
                                 </div>
                                 <div class="competency-body">
                                     Аудит и мониторинг <br /> безопасности Drupal <br /> сайтов
@@ -100,14 +108,16 @@ function YearsBlock() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3 col-sm-6">
+                    <div class="col-6 col-xs-6 col-md-3">
                         <div class="competency">
                             <div class="competency-wrapper">
                                 <div class="competency-header">
-                                    <div class="background-icon"><img src="images/icon-bg.svg" alt="Задний фон блока 1"
-                                        class="img-responsive" /></div>
-                                    <div class="competency-icon"><img src="images/competency-6.svg" alt="Иконка блока 5"
-                                        class="img-responsive" /></div>
+                                    <div class="background-icon">
+                                        <img src="images/icon-bg.svg" alt="Задний фон блока 6" class="img-responsive" />
+                                    </div>
+                                    <div class="competency-icon">
+                                        <img src="images/competency-6.svg" alt="Иконка блока 6" class="img-responsive" />
+                                    </div>
                                 </div>
                                 <div class="competency-body">
                                     Миграция, импорт <br /> контента и апгрейд <br /> Drupal
@@ -115,14 +125,16 @@ function YearsBlock() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3 col-sm-6">
+                    <div class="col-6 col-xs-6 col-md-3">
                         <div class="competency">
                             <div class="competency-wrapper">
                                 <div class="competency-header">
-                                    <div class="background-icon"><img src="images/icon-bg.svg" alt="Задний фон блока 1"
-                                        class="img-responsive" /></div>
-                                    <div class="competency-icon"><img src="images/competency-7.svg" alt="Иконка блока 6"
-                                        class="img-responsive" /></div>
+                                    <div class="background-icon">
+                                        <img src="images/icon-bg.svg" alt="Задний фон блока 7" class="img-responsive" />
+                                    </div>
+                                    <div class="competency-icon">
+                                        <img src="images/competency-7.svg" alt="Иконка блока 7" class="img-responsive" />
+                                    </div>
                                 </div>
                                 <div class="competency-body">
                                     Оптимизация <br /> и ускорение <br /> Drupal-сайтов
@@ -130,14 +142,16 @@ function YearsBlock() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3 col-sm-6">
+                    <div class="col-6 col-xs-6 col-md-3">
                         <div class="competency">
                             <div class="competency-wrapper">
                                 <div class="competency-header">
-                                    <div class="background-icon"><img src="images/icon-bg.svg" alt="Задний фон блока 1"
-                                        class="img-responsive" /></div>
-                                    <div class="competency-icon"><img src="images/competency-8.svg" alt="Иконка блока 7"
-                                        class="img-responsive" /></div>
+                                    <div class="background-icon">
+                                        <img src="images/icon-bg.svg" alt="Задний фон блока 8" class="img-responsive" />
+                                    </div>
+                                    <div class="competency-icon">
+                                        <img src="images/competency-8.svg" alt="Иконка блока 8" class="img-responsive" />
+                                    </div>
                                 </div>
                                 <div class="competency-body">
                                     Веб-маркетинг, <br /> консультации <br /> и работы по SEO
