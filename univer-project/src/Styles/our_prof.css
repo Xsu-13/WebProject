@@ -1,0 +1,68 @@
+/*Наши профессиональные разработчики*/
+.our-professional-developers-blok {
+    margin-top: 100px;
+}
+
+.our-professional-developers-name {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.competency-body-big {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.competency-body-our-professional-developers {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #282e4c;
+    padding-top: 5px;
+}
+
+
+.background-icon {
+    position: absolute;
+    width: 115px;
+    height: 70px;
+    z-index: 1;
+    left: -55px;
+    bottom: -7px;
+}
+
+@media (max-width:768px) {
+    .our-professional-developers-name {
+        font-size: 25px;
+    }
+
+    .competency-body {
+        font-size: 14px;
+    }
+
+    .background-icon {
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .competency {
+        display: flex;
+        justify-content: center;
+    }
+
+    .competency-wrapper {
+        flex-basis: 200px;
+    }
+
+    .competency-body-big {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .our-professional-developers-name {
+        font-size: 36px;
+    }
+}

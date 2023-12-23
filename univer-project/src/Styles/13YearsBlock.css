@@ -1,3 +1,4 @@
+/*13 лет...*/
 ._13-years-blok {
     padding-top: 80px;
     position: relative;
@@ -78,7 +79,7 @@
     }
 }
 
-@media (max-width:1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     ._13-years-name {
         font-size: 36px;
     }

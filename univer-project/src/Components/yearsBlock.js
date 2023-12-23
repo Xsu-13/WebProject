@@ -7,7 +7,7 @@ function YearsBlock() {
         <div class="_13-years-blok">
             <div class="container">
                 <div class="row">
-                    <div class="_13-years-name block-title col-12 col-lg-6">
+                    <div class="_13-years-name block-title col-12 col-md-6">
                         13 лет совершенствуем
                         <br />
                         компетенции в Drupal
@@ -20,7 +20,7 @@ function YearsBlock() {
                         функциональность сайтов, обновляем дизайн
                     </div>
                 </div>
-                <div class="row row-flex competencies-row">
+                <div class="row">
                     <div class="col-6 col-xs-6 col-md-3">
                         <div class="competency">
                             <div class="competency-wrapper">
