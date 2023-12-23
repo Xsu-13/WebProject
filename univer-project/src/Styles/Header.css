@@ -75,6 +75,38 @@ footer{
     padding-left: 30px;
 }
 
+.btn-primary{
+    background: transparent;
+    border: none;
+}
+
+.btn-primary{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-focus-shadow-rgb: none;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: transparent;
+}
+
+.btn-primary:hover{
+    background: transparent;
+    border: none;
+}
+
+.btn-primary:active{
+    background: transparent;
+    border: none;
+}
+
 .caret{
     display: inline-block;
     width: 0;

@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/Header.css"
+import Dropdown from 'react-bootstrap/Dropdown'
 
 function Header() {
   return (
@@ -25,14 +26,17 @@ function Header() {
                             <a class="nav-item" href="">Поддержка сайтов</a>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle nav-item" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                Тарифы
-                            </a>
-                            <ul class="menuTarif dropdown-menu">
-                                <li><a class="dropdown-item caretmenu" href="#tarif">Стартовый</a></li>
-                                <li><a class="dropdown-item caretmenu" href="#tarif">Бизнес</a></li>
-                                <li><a class="dropdown-item caretmenu" href="#tarif">VIP</a></li>
-                            </ul>
+                            <Dropdown>
+                                <Dropdown.Toggle class="dropdown-link" id="dropdown-basic">
+                                    Тарифы
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Стартовый</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Бизнес</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">VIP</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </li>
                         <li>
                             <a class="nav-item" href="">Наши работы</a>
