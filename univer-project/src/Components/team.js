@@ -17,7 +17,7 @@ function Team() {
                                     class="img-responsive" />
                             </div>
                             <div class="card-name">
-                                <a href="https://drupal-coder.ru/team" title="Профиль на drupal.org" target="_blank">Сергей Синица</a>
+                                <a href="#" title="Профиль на drupal.org" target="_blank">Сергей Синица</a>
                             </div>
                             <div class="card-post">Руководитель отдела веб-разработки, канд.техн.наук, заместитель директора
                             </div>
@@ -74,7 +74,7 @@ function Team() {
                     </div>
                 </div>
                 <div class="all-the-team ">
-                    <a href="#" class="black-title">ВСЯ КОМАНДА</a>
+                    <a href="https://drupal-coder.ru/team" class="black-title">ВСЯ КОМАНДА</a>
                 </div>
             </div>
         </div>
