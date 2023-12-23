@@ -76,7 +76,7 @@ function FormContent() {
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="agree" required/>
                 <label class="form-check-label" for="agree">
-                    Отправляя заявку, я даю согласие на обработку своих <br/>персональных данных
+                    Отправляя заявку, я даю согласие на обработку своих персональных данных
                 </label>
             </div>
             <button type="submit" onSubmit={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>

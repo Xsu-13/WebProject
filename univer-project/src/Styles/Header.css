@@ -8,6 +8,7 @@
     left: 0;
     background-color: rgba(0, 0, 0, .7);
 }
+
 /* .main{
     position: relative;
     z-index: 10;
@@ -136,6 +137,10 @@ footer{
     border: 2px solid #f14d34;
     border-radius: 5px;
     margin-top: 55px;
+}
+
+.block-main-wrapper a{
+    text-decoration: none;
 }
 
 .header-right{
@@ -312,7 +317,6 @@ footer{
 }
 
 .block-form-title{
-    
     font-size: 42px;
     font-style: normal;
     font-weight: 700;
@@ -371,9 +375,17 @@ footer{
     height: 24px;
 }
 
+.block-form-contacts ul li a{
+    text-decoration: none;
+}
+
 .tel{
     position: relative;
     top: 13px;
+}
+
+.mial{
+    margin-right: 7px;
 }
 
 .f{
@@ -406,5 +418,48 @@ footer{
 
     .cases-down-3{
         margin-bottom: 90px;
+    }
+
+    footer {
+        background-size: cover, 165px, 140px;
+        height: 1230px;
+    }
+
+    .f{
+        top: 450px;
+        width: 96%;
+        left: 10px;
+    }
+
+    .block-form-wrapper {
+        text-align: justify;
+    }
+
+    .block-form-title{
+        font-size: 24px;
+        text-align: center;
+        top: 110px;   
+        left: 60px;
+    }
+    
+    .block-form-description{
+        top: 190px;
+        width: 96%;
+    }
+    
+    .block-form-phone{
+        top: 350px;
+    }
+    
+    .block-form-email{
+        top: 410px;
+    }
+    
+    .field p{
+        top: 1120px;
+    }
+
+    .line {
+        top: 490px; 
     }
 }

@@ -21,7 +21,7 @@ function Footer() {
                                     <div class="block-form-contacts">
                                         <ul>
                                             <li class="block-form-phone"><a href="tel:88002222673"> <img class="tel" src="images/phone-line-2.png" alt=""/> 8 800 222-26-73</a></li>
-                                            <li class="block-form-email"><a href="mailto:info@drupal-coder.ru"> <img src="images/mail.png" alt=""/> info@drupal-coder.ru</a></li>
+                                            <li class="block-form-email"><a href="mailto:info@drupal-coder.ru"> <img class="mial" src="images/mail.png" alt=""/> info@drupal-coder.ru</a></li>
                                         </ul>
                                     </div>
                                 </div>
