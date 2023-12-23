@@ -7,7 +7,7 @@ function Team() {
     <div class="team">
         <div class="our-professional-developers-blok">
         <div class="container">
-            <div class="row col-md-12">
+            <div class="row">
                 <div class="block-title our-professional-developers-name">
                     Наши профессиональные разработчики
                     <br/>

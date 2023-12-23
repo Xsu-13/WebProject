@@ -6,7 +6,7 @@ function YearsBlock() {
   return (
     <div class="_13-years-blok">
     <div class="container">
-        <div class="row col-md-6">
+        <div class="row">
             <div class="block-title _13-years-name">13 лет совершенствуем <br/> компетенции в Drupal <br/>
                 поддержке!
             </div>

@@ -41,7 +41,7 @@ function Footer() {
                 </div>
             </div>
         </div>
-        <div class="line"></div>
+<div class="line"></div>
     </footer>   
   );
 }

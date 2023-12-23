@@ -6,7 +6,7 @@ function Header() {
   return (
     <div class="header">
     <div class="video">
-        <video playsinline="" autoplay="autoplay" loop="" class="fillWidth" preload="auto" muted>
+        <video playsinline="" autoplay="autoplay" loop="true" class="fillWidth" preload="auto" muted>
             <source src="images/video.mp4" type="video/mp4"/>
         </video>
     </div>
@@ -24,14 +24,14 @@ function Header() {
                         <li>
                             <a class="nav-item" href="">Поддержка сайтов</a>
                         </li>
-                        <li>
-                            <a data-toggle="dropdown" aria-expanded="false" class="nav-item">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-item" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                                 Тарифы
-                                <span class="caret"></span></a>
+                            </a>
                             <ul class="menuTarif dropdown-menu">
-                                <li><a class="caretmenu" href="#tarif">Стартовый</a></li>
-                                <li><a class="caretmenu" href="#tarif">Бизнес</a></li>
-                                <li><a class="caretmenu" href="#tarif">VIP</a></li>
+                                <li><a class="dropdown-item caretmenu" href="#tarif">Стартовый</a></li>
+                                <li><a class="dropdown-item caretmenu" href="#tarif">Бизнес</a></li>
+                                <li><a class="dropdown-item caretmenu" href="#tarif">VIP</a></li>
                             </ul>
                         </li>
                         <li>
