@@ -4,26 +4,26 @@ import "../Styles/team.css"
 
 function Team() {
     return (
-        <div class="team"> 
+        <div class="team">
             <div class="block-team container">
                 <div class="our-team black-title">
                     Команда
                 </div>
                 <div class="employee-cards">
-                    <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div class="col-6 col-lg-4">
                         <div class="new-card">
                             <div class="card-photo">
                                 <img src="images/employee-cards-image1.jpg" typeof="Image" alt="Фото члена команды"
                                     class="img-responsive" />
                             </div>
                             <div class="card-name">
-                                <a href="#" title="Профиль на drupal.org" target="_blank">Сергей Синица</a>
+                                <a href="https://drupal-coder.ru/team" title="Профиль на drupal.org" target="_blank">Сергей Синица</a>
                             </div>
-                            <div class="card-post">Руководитель отдела веб-разработки,канд.техн.наук, заместитель директора
+                            <div class="card-post">Руководитель отдела веб-разработки, канд.техн.наук, заместитель директора
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div class="col-6 col-lg-4">
                         <div class="new-card">
                             <div class="card-photo">
                                 <img src="images/employee-cards-image2.jpg" typeof="Image" alt="Фото члена команды"
@@ -35,7 +35,7 @@ function Team() {
                             <div class="card-post">Руководитель отдела DevOPS, директор</div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div class="col-6 col-lg-4">
                         <div class="new-card">
                             <div class="card-photo">
                                 <img src="images/employee-cards-image3.jpg" typeof="Image" alt="Фото члена команды"
@@ -47,7 +47,7 @@ function Team() {
                             <div class="card-post"> Руководитель отдела поддержки сайтов</div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div class="col-6 col-lg-4">
                         <div class="new-card">
                             <div class="card-photo">
                                 <img src="images/employee-cards-image4.jpg" typeof="Image" alt="Фото члена команды"
@@ -60,7 +60,7 @@ function Team() {
                                 сайтов</div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div class="col-6 col-lg-4">
                         <div class="new-card">
                             <div class="card-photo">
                                 <img src="images/employee-cards-image5.jpg" typeof="Image" alt="Фото члена команды"
