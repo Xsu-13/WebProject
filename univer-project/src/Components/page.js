@@ -1,3 +1,4 @@
+import React from 'react';
 import YearsBlock from './yearsBlock';
 import Header from './header';
 import Footer from './footer';
@@ -14,6 +15,7 @@ import Form from './form';
 function Page() {
     return (
         <div>
+            
             <div>
                 <Header />
             </div>
