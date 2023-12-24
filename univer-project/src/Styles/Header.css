@@ -124,7 +124,7 @@ footer{
     background-color: #EF4D34;
 }
 
-.caretmenu{
+/* .caretmenu{
     font-style: normal!important;
     font-weight: 500!important;
     font-size: 12px!important;
@@ -134,11 +134,9 @@ footer{
     color: #FFFFFF!important;
     text-decoration: none!important;
     opacity: 0.8!important;
-}
+} */
 
 .supportDr{
-    width: 506px;
-    height: 120px;
     top: 190px;
     left: 130px;
     font-size: 52px;
@@ -435,7 +433,94 @@ footer{
 }
 
 @media (max-width: 767px) {
-    
+
+    .nm{
+        height: 50px;
+        position: fixed;
+        z-index: 999;
+        background: #000;
+        width: 100vw;
+        top: -7px;
+    }
+
+    .logo{
+        position: relative;
+        top: 5px;
+        right: 40px;
+        width: 200px;
+    }
+
+    .navbar-toggler{
+        position: relative;
+        bottom: 5px;
+        left: 20px;
+        background: #EF4D34;
+    }
+
+    .navbarBody{
+        position: relative;
+        bottom: 10px;
+    }
+
+    .palochki{
+        background: #000000;
+    }
+
+    .linkes{
+        border-bottom: #ffffff solid 2px;
+        width: 100vw;
+        background: #000;
+    }
+
+    .header{
+        margin-bottom: 50px;
+    }
+
+    .header::before{
+        height: 150%;
+    }
+
+    .vector-img img{
+        width: 99%;
+        height: 100%;
+    }
+
+    .fillWidth {
+        width: 455%;
+    }
+
+    .supportDr{
+        text-align: center;
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .under-support{
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        opacity: 0.7;
+    }
+
+    .block-main-wrapper a{
+        position: relative;
+        left: 70px;
+    }
+
+    .header-right {
+        margin-top: 100px;
+        margin-left: 25px;
+    }
+
+    .header-item-dig-14 {
+        top: 0px;
+    }
+
+    .header-item-text-14 {
+        top: 0px;
+    }
+
     .cases img{
         width: 98%;
     }
