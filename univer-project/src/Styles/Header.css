@@ -472,12 +472,20 @@ footer{
         background: #000;
     }
 
+    .linkes.active{
+        background-color: transparent;
+    }
+
+    .dropdown{
+        margin-left: 30px;
+    }
+
     .header{
         margin-bottom: 50px;
     }
 
     .header::before{
-        height: 150%;
+        height: 170%;
     }
 
     .vector-img img{
