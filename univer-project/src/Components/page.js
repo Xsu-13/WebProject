@@ -15,7 +15,6 @@ import Form from './form';
 function Page() {
     return (
         <div>
-            
             <div>
                 <Header />
             </div>
