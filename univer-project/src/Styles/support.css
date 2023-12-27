@@ -67,6 +67,14 @@
     margin-bottom: -212px;
 }
 
+.expertise-row{
+    width: 99.1vw;
+}
+
+.expertise-laptop{
+    padding: 0;
+}
+
 .expertise{
     z-index: 4;
     position: relative;
@@ -109,7 +117,7 @@
 }
 
 .expertise-info-block{
-    padding-left: 30px;
+    padding: 0;
 }
 .expertise-img{
     margin-bottom: -150px;

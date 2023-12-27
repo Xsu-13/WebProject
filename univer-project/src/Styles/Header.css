@@ -21,7 +21,7 @@
 footer{
     position: relative;
     top: 40px;
-    width: 100vw;
+    width: 99.1vw;
     height: 850px;
     background: linear-gradient(254.72deg, rgba(255, 255, 255, .276) -114.85%, rgba(255, 255, 255, 0) 69.04%), url(../../public/Images/D-flying.svg) no-repeat top center, url(../../public/Images/D-footer.svg) no-repeat bottom right, #040613;
 }
@@ -425,7 +425,7 @@ footer{
 }
 
 .line {
-    width: 100vw;
+    width: 99.1vw;
     height: 1px;
     background-color: #FFF;
     position: relative;
