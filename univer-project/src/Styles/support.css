@@ -117,7 +117,8 @@
 }
 
 .expertise-info-block{
-    padding: 0;
+    padding: 0px;
+    padding-left: 30px;
 }
 .expertise-img{
     margin-bottom: -150px;
@@ -134,5 +135,8 @@
     }
     .expertise{
         padding-top: 380px;
+    }
+    .expertise-info-block{
+        padding: 0px;
     }
 }
