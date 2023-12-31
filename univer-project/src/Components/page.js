@@ -11,43 +11,44 @@ import Comments from './comments';
 import Workers from './workers';
 import FAQ from './faq';
 import Form from './form';
+import Loading from './loading'
 
 function Page() {
     return (
         <div>
-            <div>
-                <Header />
-            </div>
-            <div>
-                <YearsBlock />
-            </div>
-            <div>
-                <Support />
-            </div>
-            <div>
-                <Tarifs />
-            </div>
-            <div>
-                <Our_prof />
-            </div>
-            <div>
-                <Team />
-            </div>
-            <div>
-                <Cases />
-            </div>
-            <div>
-                <Comments />
-            </div>
-            <div>
-                <Workers />
-            </div>
-            <div>
-                <FAQ />
-            </div>
-            <div>
-                <Footer />
-            </div>
+                <div>
+                    <Header />
+                </div>
+                <div>
+                    <YearsBlock />
+                </div>
+                <div>
+                    <Support />
+                </div>
+                <div>
+                    <Tarifs />
+                </div>
+                <div>
+                    <Our_prof />
+                </div>
+                <div>
+                    <Team />
+                </div>
+                <div>
+                    <Cases />
+                </div>
+                <div>
+                    <Comments />
+                </div>
+                <div>
+                    <Workers />
+                </div>
+                <div>
+                    <FAQ />
+                </div>
+                <div>
+                    <Footer />
+                </div>
         </div>
 
     );
