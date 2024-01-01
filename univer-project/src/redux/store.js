@@ -1,9 +1,9 @@
 import { legacy_createStore as createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import userReducer from './userReducer'
+import reducer from './userReducer'
 
 const rootReducer = combineReducers({
-    user: userReducer
+    user: reducer
   })
 
 const middleware = applyMiddleware(thunk);

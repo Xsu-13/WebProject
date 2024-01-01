@@ -3,7 +3,7 @@ import "../Styles/MainStyle.css"
 import "../Styles/form.css"
 import Loading from './loading'
 import React, { useEffect, useState } from 'react'
-import { connect, useDispatch } from 'react-redux'
+import { connect, useDispatch} from 'react-redux'
 import { fetchUsers } from '../redux/userActions'
 
 function FormContent(props) {
@@ -15,6 +15,7 @@ function FormContent(props) {
     const [error, setError] = useState('')
 
     const dispatch = useDispatch();
+    console.log(props.loadingProgress);
 
     useEffect(() => {
         setInputValues();
@@ -80,7 +81,7 @@ function FormContent(props) {
         <form action="https://formcarry.com/s/fCsjmrtmZ4" method="POST" accept-charset="UTF-8" >
             <div class="form-group">
                 <label for="name"></label>
-                <input type="text" value={fio} onChange={(e) => {setFIO(e.target.value); safeToLocalStorage();}} class="form-control" id="name" placeholder="Ваше имя"/>
+                <input type="text" onChange={(e) => {setFIO(e.target.value); safeToLocalStorage();}} value={fio} class="form-control" id="name" placeholder="Ваше имя"/>
             </div>
             <div class="form-group">
                 <label htmlFor="phone" for="phone"></label>
@@ -109,7 +110,6 @@ function FormContent(props) {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return{
         loadingProgress: state.user.loading,
     }
