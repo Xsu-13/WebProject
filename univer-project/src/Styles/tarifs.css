@@ -23,6 +23,12 @@
 .card{
     border:none;
     margin-bottom: 20px;
+    transition: transform 0.5s;
+    background: transparent;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 .card-title{
@@ -102,12 +108,13 @@
 .unactive{
     background-color: #FFF;
     color: #F14D34;
-    
+    transition: background-color 0.5s;
 }
 
 .active{
     background-color: #F14D34;
     color: #FFF;
+    transition: background-color 0.5s;
 }
 
 .tarif-comment{

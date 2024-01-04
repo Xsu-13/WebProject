@@ -13,6 +13,7 @@ function FormContent(props) {
     const [tel, setTel] = useState('')
     const [comment, setComment] = useState('')
     const [error, setError] = useState('')
+    const [active, setActive] = useState('')
 
     const dispatch = useDispatch();
     console.log(props.loadingProgress);
@@ -32,21 +33,6 @@ function FormContent(props) {
     function onSubmit(e){
 
         e.preventDefault();
-        //e.stopPropagation();
-
-        // fetch('https://formcarry.com/s/fCsjmrtmZ4', {
-        // method: 'POST',
-        // headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        // body: localStorage.user
-        // })
-        // .then(response => {
-        //     console.log(response);
-        //     localStorage.clear();
-        //     ClearInputs();})
-        // .catch(error => {
-        //     console.log(error);
-        //     localStorage.clear();
-        //     ClearInputs();});
 
         dispatch(fetchUsers());
         ClearInputs();
