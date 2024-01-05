@@ -10,8 +10,6 @@ import Team from './team';
 import Comments from './comments';
 import Workers from './workers';
 import FAQ from './faq';
-import Form from './form';
-import Loading from './loading'
 
 function Page() {
     return (
