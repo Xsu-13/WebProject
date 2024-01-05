@@ -407,6 +407,11 @@ footer{
 
 .block-form-contacts ul li a{
     text-decoration: none;
+    color: #FFF;
+}
+
+.block-form-contacts ul li :hover{
+    color: #EF4D34;
 }
 
 .tel{
