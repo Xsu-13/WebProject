@@ -81,23 +81,6 @@ footer{
     border: none;
 }
 
-.btn-primary{
-    --bs-btn-color: #fff;
-    --bs-btn-bg: transparent;
-    --bs-btn-border-color: transparent;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: transparent;
-    --bs-btn-hover-border-color: transparent;
-    --bs-btn-focus-shadow-rgb: none;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: transparent;
-    --bs-btn-active-border-color: transparent;
-    --bs-btn-active-shadow: none;
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: transparent;
-}
-
 .btn-primary:hover{
     background: transparent;
     border: none;
@@ -167,6 +150,11 @@ footer{
     border: 2px solid #f14d34;
     border-radius: 5px;
     margin-top: 55px;
+}
+
+.block-main-btn:hover{
+    background-color: #f14d34;
+    color: #fff;
 }
 
 .block-main-wrapper a{
