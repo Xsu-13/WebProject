@@ -8,12 +8,18 @@
     background-color: #040613;
     border-radius: 5px;
     padding: 50px;
+    border: #FFF solid 2px;
 }
 
 .form{
     width: 100%;
     height: 100%;
     display: flex;
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
 }
 
 .form-control{
@@ -44,6 +50,7 @@
 
 .form-check{
     margin-top: 17px;
+    margin-bottom: -25px;
 }
 
 .form-check-input{
@@ -85,11 +92,10 @@
 }
 
 .form-button{
-    margin-top: 20px;
     background-color: #F14D34;
     border-radius: 5px;
-    width: 100%;
-    height: 60px;
+    width: 90%;
+    height: 30px;
     font-weight: 500;
     line-height: 12px;
     letter-spacing: 0.72px;
@@ -119,6 +125,11 @@
 }
 
 @media (min-width:992px) {
+
+    .form{
+        top: 48%;
+    }
+
     .form-wrapper{
         width: 30%;
         min-width: 500px;
@@ -131,5 +142,15 @@
         bottom: 30px;
         left: 10px;
         font-size: 16px;
+    }
+
+    .form-check{
+        margin-bottom: 0px;
+    }
+
+    .form-button{
+        width: 100%;
+        height: 70px;
+        margin-top: 20px;
     }
 }
