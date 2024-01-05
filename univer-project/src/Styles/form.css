@@ -138,7 +138,9 @@
     }
 }
 
-.black{
-    background-color: #040613;
-    margin-top: 100px;
+.invalid{
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #f44336;
 }

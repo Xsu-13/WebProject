@@ -39,7 +39,6 @@ const reducer = (state = initialState, action) => {
                 commentError: "",
                 nameError: "",
                 ...state,
-                loading: false,
                 emailError: "Введите корректный email.",
                 correctValidation: false,
             }

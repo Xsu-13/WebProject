@@ -119,6 +119,5 @@ export const validateUser = () =>
 
         dispatch(correctValidation())
         }
-        else return;
     }
 }

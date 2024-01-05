@@ -10,7 +10,6 @@ import Team from './team';
 import Comments from './comments';
 import Workers from './workers';
 import FAQ from './faq';
-import Test from './test'
 
 function Page() {
     return (
@@ -47,9 +46,6 @@ function Page() {
                 </div>
                 <div>
                     <Footer />
-                </div>
-                <div>
-                    <Test/>
                 </div>
         </div>
 

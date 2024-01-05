@@ -4,17 +4,17 @@ import "../Styles/form.css"
 import Loading from './loading'
 import React, { useEffect, useState, useRef } from 'react'
 import { connect, useDispatch} from 'react-redux'
-import { fetchUsers, validateUser } from '../redux/userActions'
+import { fetchUsers, nameError, validateUser } from '../redux/userActions'
 
 function FormContent(props) {
 
-    const [fio, setFIO] = useState("")
-    const [email, setEmail] = useState("")
-    const [tel, setTel] = useState("")
-    const [comment, setComment] = useState("")
-    const [active, setActive] = useState(false)
+    //const [active, setActive] = useState(false)
 
     const checkbox = useRef();
+    const fio = useRef()
+    const email= useRef()
+    const tel = useRef()
+    const comment = useRef()
 
     const dispatch = useDispatch();
     console.log("is loading - " + props.loadingProgress);
@@ -26,10 +26,10 @@ function FormContent(props) {
 
     function ClearInputs()
     {
-        setFIO('');
-        setEmail('');
-        setTel('');
-        setComment('');
+        fio.current.value = '';
+        email.current.value = '';
+        tel.current.value = '';
+        comment.current.value = '';
     }
 
     function onSubmit(e){
@@ -45,23 +45,23 @@ function FormContent(props) {
         if(localStorage.user != null)
         {
             let data = JSON.parse(localStorage.user);
-            setFIO(data.fio);
-            setEmail(data.email);
-            setTel(data.tel);
-            setComment(data.comment);
+            fio.current.value = data.fio;
+            email.current.value = data.email;
+            tel.current.value = data.tel;
+            comment.current.value = data.comment;
         }
     }
 
     function safeToLocalStorage()
     {
-        console.log({fio, tel, email, comment});
-        localStorage.user = JSON.stringify({fio, tel, email, comment});
+        console.log(fio.current.value, tel.current.value, email.current.value, comment.current.value);
+        localStorage.user = JSON.stringify({fio: fio.current.value, tel: tel.current.value, email: email.current.value, comment: comment.current.value,});
+        validate();
     }
 
     function validate()
     {
         dispatch(validateUser());
-        setActive(props.correctData && checkbox.current.checked);
     }
 
   return (
@@ -75,34 +75,34 @@ function FormContent(props) {
         <form action="https://formcarry.com/s/fCsjmrtmZ4" method="POST" accept-charset="UTF-8" >
             <div class="form-group">
                 <label for="name"></label>
-                <input type="text" onChange={(e) => {setFIO(e.target.value); safeToLocalStorage(); validate();}} value={fio} class="form-control" id="name" placeholder="Ваше имя"/>
+                <input type="text" ref={fio} onChange={()=>{safeToLocalStorage();}} class="form-control" id="name" placeholder="Ваше имя"/>
                 {props.nameError!="" && 
-                <div class="invalid-feedback">
-                    name error
+                <div class="invalid">
+                    {props.nameError}
                 </div>}
             </div>
             <div class="form-group">
                 <label htmlFor="phone" for="phone"></label>
-                <input type="tel" value={tel} onChange={(e) => {setTel(e.target.value); safeToLocalStorage(); validate(); }} class="form-control" id="phone"  placeholder="Телефон"/>
+                <input type="tel" ref={tel} onChange={() => { safeToLocalStorage(); }} class="form-control" id="phone"  placeholder="Телефон"/>
                 {props.telError!="" && 
-                <div class="invalid-feedback">
-                    tel error
+                <div class="invalid">
+                    {props.telError}
                 </div>}
             </div>
             <div class="form-group">
                 <label for="email"></label>
-                <input type="email" value={email} onChange={(e) => {setEmail(e.target.value); safeToLocalStorage(); validate();}} class="form-control" id="email" placeholder="E-mail"/>
+                <input type="email" ref={email} onChange={() => { safeToLocalStorage();}} class="form-control" id="email" placeholder="E-mail"/>
                 {props.emailError!="" && 
-                <div class="invalid-feedback">
-                    email error
+                <div class="invalid">
+                    {props.emailError}
                 </div>}
             </div>
             <div class="form-group">
                 <label for="comment"></label>
-                <textarea rows="6" type="text" value={comment} onChange={(e) => {setComment(e.target.value); safeToLocalStorage(); validate();}} class="form-control" id="comment" placeholder="Ваш комментарий"/>
+                <textarea rows="6" type="text" ref={comment} onChange={() => { safeToLocalStorage();}} class="form-control" id="comment" placeholder="Ваш комментарий"/>
                 {props.commentError != "" && 
-                <div class="invalid-feedback">
-                    comment error
+                <div class="invalid">
+                    {props.commentError}
                 </div>}
             </div>
             <div class="form-check">
@@ -111,7 +111,7 @@ function FormContent(props) {
                     Отправляя заявку, я даю согласие на обработку своих персональных данных
                 </label>
             </div>
-            <button type="submit" disabled={!active} onClick={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>    
+            <button type="submit" disabled={!(props.nameError === "" && props.emailError === "" && props.telError === "" && props.commentError === "" && checkbox.current.checked)} onClick={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>    
         </form>
     }
 </div>
