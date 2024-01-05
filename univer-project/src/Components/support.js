@@ -162,8 +162,8 @@ function Support() {
         </div>
     </div>
     <div class="expertise">
-    <div class="row flex-row">
-        <div class="col-md-6 col-sm-12 col-xs-12 order-1 order-md-0">
+    <div class="row expertise-row">
+        <div class="col-md-6 col-sm-12 col-xs-12 order-1 order-md-0 expertise-laptop">
             <div class="expertise-img">
                 <img src="images/laptop.png" alt="иконка соответсвуюшая блоку" class="img-responsive"/>
             </div>

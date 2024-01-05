@@ -21,7 +21,7 @@
 footer{
     position: relative;
     top: 40px;
-    width: 100vw;
+    width: 99.14vw;
     height: 850px;
     background: linear-gradient(254.72deg, rgba(255, 255, 255, .276) -114.85%, rgba(255, 255, 255, 0) 69.04%), url(../../public/Images/D-flying.svg) no-repeat top center, url(../../public/Images/D-footer.svg) no-repeat bottom right, #040613;
 }
@@ -104,7 +104,7 @@ footer{
 }
 
 .btn-primary:active{
-    background: transparent;
+    background: #000;
     border: none;
 }
 
@@ -175,6 +175,7 @@ footer{
 
 .header-right{
     margin-top: 130px;
+    padding-left: 0px;
 }
 
 .header-item-img{
@@ -263,8 +264,8 @@ footer{
     font-weight: 700;
     line-height: normal;
     position: relative;
-    left: 30px;
-    top: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
 }
 
 .cases-up-1-22{
@@ -274,8 +275,8 @@ footer{
     line-height: normal;
     opacity: 0.5;
     position: relative;
-    left: 30px;
-    top: 45px;
+    padding-left: 30px;
+    padding-top: 10px;
 }
 
 .cases-up-1-eti{
@@ -285,8 +286,8 @@ footer{
     line-height: 22px;
     opacity: 0.7;
     position: relative;
-    left: 30px;
-    top: 60px;
+    padding-left: 30px;
+    padding-top: 20px;
 }
 
 .cases-up-2-nastr{
@@ -295,7 +296,7 @@ footer{
     font-weight: 700;
     line-height: normal;
     position: relative;
-    left: 40px;
+    padding-left: 40px;
     bottom: 84px;
     color: #FFF;
 }
@@ -307,7 +308,7 @@ footer{
     font-weight: 700;
     line-height: normal;
     position: relative;
-    left: 40px;
+    padding-left: 40px;
     bottom: 114px;
 }
 
@@ -318,7 +319,7 @@ footer{
     line-height: normal;
     opacity: 0.5;
     position: relative;
-    left: 40px;
+    padding-left: 40px;
     bottom: 114px;
     color: #FFF;
 }
@@ -330,7 +331,7 @@ footer{
     font-weight: 700;
     line-height: normal;
     position: relative;
-    left: 40px;
+    padding-left: 40px;
     bottom: 104px;
 }
 
@@ -341,7 +342,7 @@ footer{
     line-height: normal;
     opacity: 0.5;
     position: relative;
-    left: 40px;
+    padding-left: 40px;
     bottom: 104px;
     color: #FFF;
 }
@@ -430,7 +431,7 @@ footer{
 }
 
 .line {
-    width: 100vw;
+    width: 99.14vw;
     height: 1px;
     background-color: #FFF;
     position: relative;
@@ -525,7 +526,7 @@ footer{
 
     .header-right {
         margin-top: 100px;
-        margin-left: 25px;
+        padding-left: 25px;
     }
 
     .header-item-dig-14 {

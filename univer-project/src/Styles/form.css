@@ -111,6 +111,13 @@
     background-color: transparent;
 }
 
+.loading-container{
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width:992px) {
     .form-wrapper{
         width: 30%;
