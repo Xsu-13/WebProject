@@ -97,6 +97,10 @@
     font-size: 12px;
     text-align: center;
     color: var(--White, #FFF);
+
+    &:disabled{
+        background-color: #f14d347a;
+    }
 }
 
 .btn-close-form:hover svg path{
@@ -132,4 +136,9 @@
         left: 10px;
         font-size: 16px;
     }
+}
+
+.black{
+    background-color: #040613;
+    margin-top: 100px;
 }

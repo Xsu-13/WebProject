@@ -1,4 +1,4 @@
-import { FETCH_USER_FAILURE, FETCH_USER_REQUEST, FETCH_USER_SUCCESS } from "./userTypes"
+import { COMMENT_USER_ERROR, DATA_USER_CORRECT, EMAIL_USER_ERROR, FETCH_USER_FAILURE, FETCH_USER_REQUEST, FETCH_USER_SUCCESS, NAME_USER_ERROR, TEL_USER_ERROR } from "./userTypes"
 
 export const fetchUsersRequest = () => {
     console.log(FETCH_USER_REQUEST)
@@ -21,6 +21,41 @@ export const fetchUsersFailure = () => {
     }
 }
 
+export const emailError = () => {
+
+    return {
+        type: EMAIL_USER_ERROR
+    }
+}
+
+export const telError = () => {
+
+    return {
+        type: TEL_USER_ERROR
+    }
+}
+
+export const nameError = () => {
+
+    return {
+        type: NAME_USER_ERROR
+    }
+}
+
+export const commentError = () => {
+
+    return {
+        type: COMMENT_USER_ERROR
+    }
+}
+
+export const correctValidation = () => {
+
+    return {
+        type: DATA_USER_CORRECT
+    }
+}
+
 export const fetchUsers = () =>
 {
     return (dispatch) => {
@@ -39,6 +74,51 @@ export const fetchUsers = () =>
         .catch(error => {
             console.log(error);
             dispatch(fetchUsersFailure());
-            localStorage.clear();});
+            });
+    }
+}
+
+export const validateUser = () =>
+{
+    return (dispatch) => {
+
+        if(localStorage.user != null)
+        {
+            let data = JSON.parse(localStorage.user);
+
+        const isEmail = (str) => /^(.+)@(.+)\.(.+)$/.test(str);
+        const isMobilePhone = (str) => /^(\+?7|8)?9\d{9}$/.test(str);
+        const isAlpha = (str) => /^[A-ZА-ЯЁ]+$/i.test(str)
+
+        const emailValidation = isEmail(data.email);
+        const telValidation = isMobilePhone(data.tel);
+        const nameValidation = isAlpha(data.fio);
+
+        if(data.fio === "" || !nameValidation)
+        {
+            dispatch(nameError()); 
+            return;
+        }
+        if(!telValidation || data.tel === "")
+        {
+            dispatch(telError()); 
+            return;
+        }
+
+        if(!emailValidation || data.email === "")
+        {
+            dispatch(emailError()); 
+            return;
+        }
+
+        if(data.comment === "")
+        {
+            dispatch(commentError()); 
+            return;
+        }
+
+        dispatch(correctValidation())
+        }
+        else return;
     }
 }

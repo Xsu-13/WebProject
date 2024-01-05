@@ -10,8 +10,7 @@ import Team from './team';
 import Comments from './comments';
 import Workers from './workers';
 import FAQ from './faq';
-import Form from './form';
-import Loading from './loading'
+import Test from './test'
 
 function Page() {
     return (
@@ -48,6 +47,9 @@ function Page() {
                 </div>
                 <div>
                     <Footer />
+                </div>
+                <div>
+                    <Test/>
                 </div>
         </div>
 
