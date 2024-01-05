@@ -4,20 +4,18 @@ import "../Styles/form.css"
 import Loading from './loading'
 import React, { useEffect, useState, useRef } from 'react'
 import { connect, useDispatch} from 'react-redux'
-import { fetchUsers, nameError, validateUser } from '../redux/userActions'
+import { fetchUsers, validateUser } from '../redux/userActions'
 
 function FormContent(props) {
 
-    //const [active, setActive] = useState(false)
-
-    const checkbox = useRef();
     const fio = useRef()
     const email= useRef()
     const tel = useRef()
     const comment = useRef()
 
     const dispatch = useDispatch();
-    console.log("is loading - " + props.loadingProgress);
+    const [checked, setCheck] = useState(false);
+    //console.log("is loading - " + props.loadingProgress);
 
     useEffect(() => {
         setInputValues();
@@ -54,7 +52,7 @@ function FormContent(props) {
 
     function safeToLocalStorage()
     {
-        console.log(fio.current.value, tel.current.value, email.current.value, comment.current.value);
+        //console.log(fio.current.value, tel.current.value, email.current.value, comment.current.value);
         localStorage.user = JSON.stringify({fio: fio.current.value, tel: tel.current.value, email: email.current.value, comment: comment.current.value,});
         validate();
     }
@@ -106,12 +104,12 @@ function FormContent(props) {
                 </div>}
             </div>
             <div class="form-check">
-                <input ref={checkbox} class="form-check-input" type="checkbox" onChange={() => {validate();}} id="agree" required/>
+                <input class="form-check-input" type="checkbox" onChange={() => {setCheck(!checked); validate();}} checked={checked} id="agree" required/>
                 <label class="form-check-label" for="agree">
                     Отправляя заявку, я даю согласие на обработку своих персональных данных
                 </label>
             </div>
-            <button type="submit" disabled={!(props.nameError === "" && props.emailError === "" && props.telError === "" && props.commentError === "" && checkbox.current.checked)} onClick={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>    
+            <button type="submit" disabled={(!(props.nameError == "") || !(props.telError == "") || !(props.emailError == "") || !(props.commentError == "") || !checked)} onClick={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>    
         </form>
     }
 </div>
