@@ -10,10 +10,12 @@ function FAQ() {
     let classActiveBorder = "active-border";
 
     useEffect(() => {
-        $('.question-item').on('click', function (e) {
-            e.preventDefault();
-            const clickedItem = $(this);
+        $('.question-item').on('click', function (e) { 
+            e.preventDefault(); 
+            const clickedItem = $(this); 
+            const content = clickedItem.find('.question-content');
 
+ 
             // Check if the clicked item is already active
             const isActive = clickedItem.hasClass(classActive);
 
@@ -26,10 +28,12 @@ function FAQ() {
                 clickedItem.addClass(classActiveBorder);
                 $('.question-title').css('color', ''); // Reset color for all questions
                 clickedItem.find('.question-title').css('color', '#f14d34'); // Set color for clicked question
+                content.addClass('open');
             } else {
                 $('.question-title').css('color', ''); // Reset color for all questions
+                content.removeClass('open');
             }
-        });
+            });
     }, []);
 
     return (
