@@ -12,13 +12,14 @@
 }
 
 .form{
+    opacity: 1;
     width: 100%;
     height: 100%;
     display: flex;
     position: fixed;
     top: 53%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     z-index: 999;
 }
 
@@ -103,10 +104,6 @@
     font-size: 12px;
     text-align: center;
     color: var(--White, #FFF);
-
-    &:disabled{
-        background-color: #f14d347a;
-    }
 }
 
 .btn-close-form:hover svg path{
@@ -161,11 +158,4 @@
     .form-control{
         height: 60px;
     }
-}
-
-.invalid{
-    padding-top: 5px;
-    padding-left: 10px;
-    font-size: 14px;
-    color: #f44336;
 }
