@@ -39,13 +39,13 @@ function DesctopHeader()
                             </Dropdown>
                         </li>
                         <li>
-                            <a class="nav-item" href="">Наши работы</a>
+                            <a class="nav-item" href="#cases">Наши работы</a>
                         </li>
                         <li>
-                            <a class="nav-item" href="">Отзывы</a>
+                            <a class="nav-item" href="#comments">Отзывы</a>
                         </li>
                         <li>
-                            <a class="nav-item" href="">Контакты</a>
+                            <a class="nav-item" href="#contacts">Контакты</a>
                         </li>
                     </ul>
                 </div>

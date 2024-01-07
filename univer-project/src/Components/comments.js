@@ -61,7 +61,7 @@ function Comments() {
     }
 
   return (
-    <div class="comments">
+    <div class="comments" id='comments'>
         <div class="container">
             <div class="comments-title black-title">
                 Отзывы
