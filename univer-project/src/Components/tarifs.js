@@ -19,7 +19,7 @@ function Tarifs() {
     }
 
   return (
-    <div class="tarifs">
+    <div class="tarifs" id="block-tariffs">
         <div class="container">
             <div class="tarif-title">
                 Тарифы
