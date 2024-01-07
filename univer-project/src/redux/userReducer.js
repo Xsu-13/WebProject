@@ -25,38 +25,38 @@ const reducer = (state = initialState, action) => {
             }
         case NAME_USER_ERROR:
             return {
+                ...state,
                 telError: "",
                 commentError: "",
                 emailError: "",
-                ...state,
                 nameError: "Введите корректное имя.",
                 correctValidation: false,
             }
             
         case EMAIL_USER_ERROR:
             return {
+                ...state,
                 telError: "",
                 commentError: "",
                 nameError: "",
-                ...state,
                 emailError: "Введите корректный email.",
                 correctValidation: false,
             }
         case COMMENT_USER_ERROR:
             return {
+                ...state,
                 telError: "",
                 nameError: "",
                 emailError: "",
-                ...state,
                 commentError: "Неоходимо ваше мнение.",
                 correctValidation: false,
             }
         case TEL_USER_ERROR:
             return {
+                ...state,
                 nameError: "",
                 commentError: "",
                 emailError: "",
-                ...state,
                 telError: "Введите корректный номер телефона.",
                 correctValidation: false,
             }
