@@ -94,6 +94,7 @@ export const validateUser = () =>
         const telValidation = isMobilePhone(data.tel);
         const nameValidation = isAlpha(data.fio);
 
+
         if(data.fio === "" || !nameValidation)
         {
             dispatch(nameError()); 
