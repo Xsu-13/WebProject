@@ -432,7 +432,7 @@ footer{
     height: 1px;
     background-color: #FFF;
     position: relative;
-    top: 160px; 
+    top: 200px; 
 }
 
 @media (max-width: 767px) {
@@ -487,8 +487,8 @@ footer{
         margin-bottom: 50px;
     }
 
-    .header::before{
-        height: 170%;
+    .blur-background{
+        bottom: -60%;
     }
 
     .vector-img img{
