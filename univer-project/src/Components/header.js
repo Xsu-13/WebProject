@@ -112,6 +112,7 @@ function HeaderBackground()
         <div class="vector-img">
             <img src="/Images/druplicon.svg" alt=""/>
         </div>
+        <div class="blur-background"></div>
     </>
     )
 }

@@ -15,7 +15,6 @@ function FormContent(props) {
 
     const dispatch = useDispatch();
     const [checked, setCheck] = useState(false);
-    //console.log("is loading - " + props.loadingProgress);
 
     useEffect(() => {
         setInputValues();
@@ -52,7 +51,6 @@ function FormContent(props) {
 
     function safeToLocalStorage()
     {
-        //console.log(fio.current.value, tel.current.value, email.current.value, comment.current.value);
         localStorage.user = JSON.stringify({fio: fio.current.value, tel: tel.current.value, email: email.current.value, comment: comment.current.value,});
         validate();
     }
