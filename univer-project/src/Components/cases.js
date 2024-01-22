@@ -6,7 +6,7 @@ function Cases() {
   return (
     <div class="main">
     <div class="container">
-        <div class="cases">
+        <div class="cases" id='cases'>
             <div class="cases-name">
                 Последние кейсы
             </div>

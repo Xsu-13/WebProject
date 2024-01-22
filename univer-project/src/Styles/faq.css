@@ -51,18 +51,19 @@
 }
 
 
-.question-item.activeAnswer .question-content {
+.question-item.activeAnswer .question-content{
     display: block;
 }
 
 .question-item.active-border {
     border: 3px solid #f14d34;
+    transition: border 0.1s;
 }
 
-.question-content ul li {
-    list-style: disc;
-    font-size: 16px;
-    color: #4e5a73;
+.question-content { 
+    max-height: 0; 
+    overflow: hidden; 
+    opacity: 0; 
 }
 
 .question-content ul {
@@ -81,4 +82,10 @@
 
 .block-faq {
     margin-bottom: 40px;
+}
+
+.open { 
+    max-height: 2000px; 
+    opacity: 1; 
+    transition: max-height 0.2s ease-in-out, opacity 1s ease-in-out;  
 }

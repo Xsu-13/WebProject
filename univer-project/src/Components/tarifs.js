@@ -2,8 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/tarifs.css"
 import {useNavigate} from 'react-router-dom'
+import { useState } from 'react';
 
 function Tarifs() {
+    const [isActive1, setIsActive1] = useState(false);
+    const [isActive2, setIsActive2] = useState(false);
+    const [isActive3, setIsActive3] = useState(false);
+
+    const activeClass = "card-button active";
+    const unactiveClass = "card-button unactive";
 
     const navigate = useNavigate();
   
@@ -12,13 +19,13 @@ function Tarifs() {
     }
 
   return (
-    <div class="tarifs">
+    <div class="tarifs" id='tarifs'>
         <div class="container">
             <div class="tarif-title">
                 Тарифы
             </div>
             <div class="row">
-                <div class="col-md-4 card">
+                <div class="col-md-4 card" onMouseEnter={() => {setIsActive1(true)}} onMouseLeave={() => setIsActive1(false)}>
                     <div class="card-content">
                         <div class="card-title">
                             Стартовый
@@ -48,10 +55,10 @@ function Tarifs() {
                                 </li>
                             </ul>
                         </div>
-                        <button onClick={() => OpenForm()} class="card-button unactive">Оставить заявку!</button>
+                        <button onClick={() => OpenForm()} class="card-button" className={isActive1 && activeClass || unactiveClass}>Оставить заявку!</button>
                     </div>
                 </div>
-                <div class="col-md-4 card">
+                <div class="col-md-4 card" onMouseEnter={() => {setIsActive2(true)}} onMouseLeave={() => setIsActive2(false)}>
                     <div class="card-content">
                         <div class="card-title">
                             Бизнес
@@ -71,10 +78,10 @@ function Tarifs() {
                                 <li class="card-list-item">Неиспользованные часы не переносятся</li>
                             </ul>
                         </div>
-                        <button onClick={() => OpenForm()} class="card-button active">Оставить заявку!</button>
+                        <button onClick={() => OpenForm()} className={isActive2 && activeClass || unactiveClass}>Оставить заявку!</button>
                     </div>
                 </div>
-                <div class="col-md-4 card">
+                <div class="col-md-4 card" onMouseEnter={() => {setIsActive3(true)}} onMouseLeave={() => setIsActive3(false)}>
                     <div class="card-content">
                         <div class="card-title">
                             VIP
@@ -94,7 +101,7 @@ function Tarifs() {
                                 <li class="card-list-item">Неиспользованные часы не переносятся</li>
                             </ul>
                         </div>
-                        <button onClick={() => OpenForm()} class="card-button unactive">Оставить заявку!</button>
+                        <button onClick={() => OpenForm()} class="card-button" className={isActive3 && activeClass || unactiveClass}>Оставить заявку!</button>
                     </div>
                 </div>
             </div>

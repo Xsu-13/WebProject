@@ -1,79 +1,77 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/form.css"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
+import { useRef } from 'react'
 import FormContent from './formContent'
 
 function Form() {
     
     const navigate = useNavigate();
+    const form = useRef();
   
     const closeForm = () =>{
       navigate("/");
     }
 
-    const [fio, setFIO] = useState('')
-    const [email, setEmail] = useState('')
-    const [tel, setTel] = useState('')
-    const [comment, setComment] = useState('')
-    const [error, setError] = useState('')
-
     useEffect(() => {
-        setInputValues();
-    }, []);
-
-    function ClearInputs()
-    {
-        setFIO('');
-        setEmail('');
-        setTel('');
-        setComment('');
-    }
-
-    function onSubmit(e){
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        fetch('https://formcarry.com/s/fCsjmrtmZ4', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify({fio, tel, email, comment})
-        })
-        .then(response => {
-            console.log(response);
-            localStorage.clear();
-            ClearInputs();})
-        .catch(error => {
-            console.log(error);
-            localStorage.clear();
-            ClearInputs();});
-    } 
+      OpenAnimation();
+  }, []);
 
     function onClose(e)
     {
-        e.preventDefault();
-        e.stopPropagation();
+      e.preventDefault();
+      e.stopPropagation();
 
-        localStorage.user = JSON.stringify({fio, tel, email, comment});
-        closeForm();
+      // После добавления анимации обязательно заменить данную строку вызовом функции анимации закрытия (CloseAnimation),
+      // в которой после окончания анимации уже будет вызвана closeForm().
+      CloseAnimation();
     }
 
-    function setInputValues()
+    function CloseAnimation()
     {
-        if(localStorage.user != null)
+      const duration = 500;
+
+        let startAnimation = null;
+        requestAnimationFrame(function measure(time)
         {
-            let data = JSON.parse(localStorage.user);
-            setFIO(data.fio);
-            setEmail(data.email);
-            setTel(data.tel);
-            setComment(data.comment);
-        }
+            if(!startAnimation)
+              startAnimation = time;
+
+            const progress = (time-startAnimation) / duration;
+
+            form.current.style.opacity = 1 - progress;
+            form.current.style.transform = `translate(-50%, -50%) scale(${1 - progress})`;
+
+            if(progress < 1)
+              requestAnimationFrame(measure)
+            else closeForm();
+        })
+    }
+
+    function OpenAnimation()
+    {
+        const duration = 500;
+
+        let startAnimation = null;
+        requestAnimationFrame(function measure(time)
+        {
+            if(!startAnimation)
+              startAnimation = time;
+
+            const progress = (time-startAnimation) / duration;
+
+            form.current.style.opacity = progress;
+            form.current.style.transform = `translate(-50%, -50%) scale(${progress})`;
+
+            if(progress < 1)
+              requestAnimationFrame(measure)
+        })
     }
 
   return (
-    <div class="form">
+  <div class="form" ref={form}>
     <div class="form-wrapper">
         <button type="button" onClick={(e) => onClose(e)} id="close-btn" class="btn-close-form">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
@@ -82,7 +80,7 @@ function Form() {
         </button>
         <FormContent/>
     </div>
-</div>
+  </div>
   );
 }
 

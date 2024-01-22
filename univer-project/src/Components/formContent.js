@@ -1,46 +1,40 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "../Styles/MainStyle.css"
 import "../Styles/form.css"
-import React, { useEffect, useState } from 'react'
+import Loading from './loading'
+import React, { useEffect, useState, useRef } from 'react'
+import { connect, useDispatch} from 'react-redux'
+import { fetchUsers, validateUser } from '../redux/userActions'
 
-function FormContent() {
+function FormContent(props) {
 
-    const [fio, setFIO] = useState('')
-    const [email, setEmail] = useState('')
-    const [tel, setTel] = useState('')
-    const [comment, setComment] = useState('')
-    const [error, setError] = useState('')
+    const fio = useRef()
+    const email= useRef()
+    const tel = useRef()
+    const comment = useRef()
+
+    const dispatch = useDispatch();
+    const [checked, setCheck] = useState(false);
 
     useEffect(() => {
         setInputValues();
+        validate();
     }, []);
 
     function ClearInputs()
     {
-        setFIO('');
-        setEmail('');
-        setTel('');
-        setComment('');
+        fio.current.value = '';
+        email.current.value = '';
+        tel.current.value = '';
+        comment.current.value = '';
     }
 
     function onSubmit(e){
 
         e.preventDefault();
-        e.stopPropagation();
 
-        fetch('https://formcarry.com/s/fCsjmrtmZ4', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify({fio, tel, email, comment})
-        })
-        .then(response => {
-            console.log(response);
-            localStorage.clear();
-            ClearInputs();})
-        .catch(error => {
-            console.log(error);
-            localStorage.clear();
-            ClearInputs();});
+        dispatch(fetchUsers());
+        ClearInputs();
     } 
 
     function setInputValues()
@@ -48,40 +42,88 @@ function FormContent() {
         if(localStorage.user != null)
         {
             let data = JSON.parse(localStorage.user);
-            setFIO(data.fio);
-            setEmail(data.email);
-            setTel(data.tel);
-            setComment(data.comment);
+            fio.current.value = data.fio;
+            email.current.value = data.email;
+            tel.current.value = data.tel;
+            comment.current.value = data.comment;
         }
     }
 
+    function safeToLocalStorage()
+    {
+        localStorage.user = JSON.stringify({fio: fio.current.value, tel: tel.current.value, email: email.current.value, comment: comment.current.value,});
+        validate();
+    }
+
+    function validate()
+    {
+        dispatch(validateUser());
+    }
+
   return (
+<div>
+    { props.loadingProgress && 
+        <div class="loading-container">
+            <Loading/>
+        </div>
+    }
+    { !props.loadingProgress &&
         <form action="https://formcarry.com/s/fCsjmrtmZ4" method="POST" accept-charset="UTF-8" >
             <div class="form-group">
                 <label for="name"></label>
-                <input type="text" value={fio} onChange={(e) => setFIO(e.target.value)} class="form-control" id="name" placeholder="Ваше имя"/>
+                <input type="text" ref={fio} onChange={()=>{safeToLocalStorage();}} class="form-control" id="name" placeholder="Ваше имя"/>
+                {props.nameError!="" && 
+                <div class="invalid">
+                    {props.nameError}
+                </div>}
             </div>
             <div class="form-group">
                 <label htmlFor="phone" for="phone"></label>
-                <input type="tel" pattern="\d*" value={tel} onChange={(e) => setTel(e.target.value)} class="form-control" id="phone"  placeholder="Телефон"/>
+                <input type="tel" ref={tel} onChange={() => { safeToLocalStorage(); }} class="form-control" id="phone"  placeholder="Телефон"/>
+                {props.telError!="" && 
+                <div class="invalid">
+                    {props.telError}
+                </div>}
             </div>
             <div class="form-group">
                 <label for="email"></label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} class="form-control" id="email" placeholder="E-mail"/>
+                <input type="email" ref={email} onChange={() => { safeToLocalStorage();}} class="form-control" id="email" placeholder="E-mail"/>
+                {props.emailError!="" && 
+                <div class="invalid">
+                    {props.emailError}
+                </div>}
             </div>
             <div class="form-group">
                 <label for="comment"></label>
-                <textarea rows="6" type="text" value={comment} onChange={(e) => setComment(e.target.value)} class="form-control" id="comment" placeholder="Ваш комментарий"/>
+                <textarea rows="6" type="text" ref={comment} onChange={() => { safeToLocalStorage();}} class="form-control" id="comment" placeholder="Ваш комментарий"/>
+                {props.commentError != "" && 
+                <div class="invalid">
+                    {props.commentError}
+                </div>}
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="agree" required/>
+                <input class="form-check-input" type="checkbox" onChange={() => {setCheck(!checked); validate();}} checked={checked} id="agree" required/>
                 <label class="form-check-label" for="agree">
-                    Отправляя заявку, я даю согласие на обработку своих <br/>персональных данных
+                    Отправляя заявку, я даю согласие на обработку своих персональных данных
                 </label>
             </div>
-            <button type="submit" onSubmit={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>
+            <button type="submit" disabled={(!(props.nameError == "") || !(props.telError == "") || !(props.emailError == "") || !(props.commentError == "") || !checked)} onClick={(e) => onSubmit(e)} class="form-button">Оставить заявку!</button>    
         </form>
+    }
+</div>
+    
   );
 }
 
-export default FormContent;
+const mapStateToProps = (state) => {
+    return{
+        loadingProgress: state.user.loading,
+        correctData: state.user.correctValidation,
+        nameError: state.user.nameError,
+        emailError: state.user.emailError,
+        telError: state.user.telError,
+        commentError: state.user.commentError,
+    }
+}
+
+export default connect(mapStateToProps)(FormContent);
